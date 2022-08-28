@@ -284,6 +284,8 @@ pip3 install -r requirements.txt
 
 - If you have an C++ error you must install the [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 - Then you have to install the Desktop developement with C++
+
+![[Pasted image 20220828213350.png]]
 - If you get an Python-Snappy error while installing the requirements you have to install the python snappy module from the [Unofficial Windows Binaries for Python](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-snappy)
 ```
 pip install \Path\To\python-snappy
