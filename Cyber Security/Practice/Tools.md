@@ -286,6 +286,7 @@ pip3 install -r requirements.txt
 - Then you have to install the Desktop developement with C++
 
 ![[Pasted image 20220828213350.png]]
+
 - If you get an Python-Snappy error while installing the requirements you have to install the python snappy module from the [Unofficial Windows Binaries for Python](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-snappy)
 ```
 pip install \Path\To\python-snappy
@@ -302,27 +303,122 @@ pip debug --verbose
 python-snappy==0.6.1
 ```
 
-
+- Install the symbols required for the different OS ([windows](https://downloads.volatilityfoundation.org/volatility3/symbols/windows.zip) [mac](https://downloads.volatilityfoundation.org/volatility3/symbols/mac.zip) [linux](https://downloads.volatilityfoundation.org/volatility3/symbols/linux.zip)) and unpack them into the /volatility3/volatility3/symbols/ folder
 
 ### Volatility3 Commands
+- Show Info about the image
+```
+python3 vol.py -f memdump.raw windows.info
+```
+
 - Show Process Tree:
 ```
 py vol.py -f memdump.raw windows.pslist
 ```
-- Show Info about the image
+
+- Filter process tree after filename
 ```
-py vol.py -f memdump.raw windows.info
+python vol.py -f memdump.raw windows.pslist | Select-String filename
+```
+
+- Filter Windows Handles after PID
+```
+python vol.py -f memdump.raw windows.handles --pid 1328
+```
+
+- Filter Windows Handles after PID and type
+```
+python vol.py -f memdump.raw windows.handles --pid 1328 | Select-String File | more
+```
+
+- Dump all files associated with PID 3784.
+```
+python vol.py -f [ImageName]windows.dumpfiles.DumpFiles --pid 3784 |
+```
+
+- See executed programs with command option history.
+```
+python vol.py -f [ImageName] windows.cmdline.CmdLine
+```
+
+- See active network connections and listening programs.
+```
+python vol.py -f [ImageName] windows.netstat
+```
+
+- Dump the Windows user password hashes.
+```
+python vol.py -f [ImageName] windows.hashdump.Hashdump
+```
+
+- Print out the Windows Registry UserAssist.
+```
+python vol.py -f [ImageName] windows.registry.userassist.UserAssist
+```
+
+- List all available Windows Registry hives in memory.
+```
+python vol.py -f [ImageName] windows.registay.hivelist.HiveList
+```
+
+- Dump the ntuser hive based on a keyword filter.
+```
+python vol.py -f [ImageName] -o "dump" windows.registry.hivelist --filter Doe\ntuser.dat --dump
+```
+
+- Print a specific Windows Registry key.
+```
+python vol.py -f [ImageName] windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" --recurse
+```
+
+- Print a specific Windows Registry key, subkeys and values.
+```
+python vol.py -f [ImageName] windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" --recurse
+```
+
+- Save memdump to a .dmp file
+```
+python3 vol.py -f /Users/usamaguenedi/Library/CloudStorage/OneDrive-activelan.ch/02_Cyber\ Security/01_REAC/ftp_mem.raw windows.memmap.Memmap  --pid 368 -–dump
+```
+
+- Use Grep to find something in the .dmp file
+```
+strings pid.368.dmp | grep "filename" | grep -v “filetype”
 ```
 
 ### Volatility2 Commands
-- Show Process Tree:
+- Show image information
 ```
-volatility_2.6.exe -f memdump.raw --profile=Win7SP1x86 pslist
+python vol.py -f memdump.raw imageinfo
 ```
 
-- Show Info about the image
 ```
-volatility_2.6.exe -f memdump.raw imageinfo
+python vol.py -f memdump.raw kdbgscan
+```
+
+- Show Process Tree:
+```
+python -f memdump.raw --profile=Win7SP1x86 pslist
+```
+
+- Create a executable.exe file with PID
+```
+python vol.py -f ftp_mem.raw --profile=Win7SP1x86_23418 procdump --dump-dir . -p 368
+```
+
+- Create a executable.exe with physical memory adress
+```
+python vol.py -f ftp_mem.raw --profile=Win7SP1x86_23418 dumpfiles -Q 0x000000007dd6e038 -D .
+```
+
+- Search memdump after filename
+```
+python vol.py -f ftp_mem.raw --profile=Win7SP1x86_23418 filescan | grep -i filename
+```
+
+- Search memdump after file-extension
+```
+python vol.py -f ftp_mem.raw --profile=Win7SP1x86_23418 filescan | grep -i filename | grep -v filetype
 ```
 
 ### [MemProcFS](https://github.com/ufrisk/MemProcFS)

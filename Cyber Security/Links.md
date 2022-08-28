@@ -21,6 +21,7 @@
 - [Oracle Update Vulnerabilities](https://www.oracle.com/security-alerts/)
 - [#Slowloris](https://www.cloudflare.com/learning/ddos/ddos-attack-tools/slowloris/)
 - [#SQLi Explained](https://www.w3schools.com/sql/sql_injection.asp)
+- [Analyzing memdump with volatility](https://flikk.blog/2021/01/13/analyzing-a-memory-dump-for-malicious-activity-with-volatility/)
 
 
 ## Guides
