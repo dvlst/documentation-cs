@@ -26,6 +26,7 @@
 - [ ] KAF von vorherigem Test dokumentieren [eTutor](https://www.ict-schlusspruefungen.ch/e-tutor/v4/user/login)
 - [ ] [ICT-Berufsbildung Hackinglab](https://ict-berufsbildung.hacking-lab.com/) Aufgaben repetieren
 - [ ] Ordnerstruktur anpassen
+- [ ] Volatility Cheat Shee Usama einbinden
 
 ## Hacking Lab
 ### [DETE](https://siw.hacking-lab.com/events/4)
