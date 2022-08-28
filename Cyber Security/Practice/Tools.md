@@ -271,7 +271,38 @@ SecRule RESPONSE_BODY "@verifyCC \d{13,16}" "phase:4,id:1,t:none,log,capture,
 - [Cheat Sheet Tools Volatility Commands](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-examples)
 - [Volatility Command Reference](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference)
 
-### Volatility 3 Commands
+### Volatility3 install Windows
+- Clone Repository from Github
+```
+git clone https://github.com/volatilityfoundation/volatility3.git
+```
+
+- Install requierements
+```
+pip3 install -r requirements.txt
+```
+
+- If you have an C++ error you must install the [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+- Then you have to install the Desktop developement with C++
+- If you get an Python-Snappy error while installing the requirements you have to install the python snappy module from the [Unofficial Windows Binaries for Python](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-snappy)
+```
+pip install \Path\To\python-snappy
+```
+
+- With this command you can show your supported version (cp310-cp310 worked for me):
+```
+pip debug --verbose
+```
+
+- You have to edit the requirements.txt to edit the python-snappy version:
+```
+...
+python-snappy==0.6.1
+```
+
+
+
+### Volatility3 Commands
 - Show Process Tree:
 ```
 py vol.py -f memdump.raw windows.pslist
@@ -281,7 +312,7 @@ py vol.py -f memdump.raw windows.pslist
 py vol.py -f memdump.raw windows.info
 ```
 
-### Volatility 2 Commands
+### Volatility2 Commands
 - Show Process Tree:
 ```
 volatility_2.6.exe -f memdump.raw --profile=Win7SP1x86 pslist
