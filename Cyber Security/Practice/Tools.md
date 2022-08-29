@@ -277,7 +277,7 @@ SecRule RESPONSE_BODY "@verifyCC \d{13,16}" "phase:4,id:1,t:none,log,capture,
 git clone https://github.com/volatilityfoundation/volatility3.git
 ```
 
-- Install requierements
+- Install requirements
 ```
 pip3 install -r requirements.txt
 ```

@@ -22,7 +22,7 @@
 
 ## IPv4/IPv6
 - Grundlage des Internets
-- Routabel
+- Routable
 - Netzwerke können miteinander verbunden werden
 - Aufteilung in Netz und Host (Subnetzmaske)
 - CIDR-Notation: 10.0.0.0 - 10.255.255.255 = 10.0.0.0/8

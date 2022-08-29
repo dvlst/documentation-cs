@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Temp.md",
+            "file": "Practice/DETE.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nessus",
+                "query": "tag:#Chain-of-Trust",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Temp.md",
+                "file": "Practice/DETE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Temp.md",
+                "file": "Practice/DETE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Temp.md"
+                "file": "Practice/DETE.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "878f0a06fe7c062a",
   "lastOpenFiles": [
-    "Links.md",
-    "Practice/Tools.md",
     "Practice/Network.md",
+    "Practice/DETE.md",
+    "Practice/PRÄV.md",
+    "Practice/Tools.md",
+    "Practice/Scripts.md",
     "Practice/REAC.md",
     "Temp.md",
-    "Practice/Scripts.md",
+    "Links.md",
     "Theory/PRMA.md",
-    "Theory/ITIL.md",
-    "Theory/BUDG.md",
-    "Theory/PERF.md"
+    "Theory/ITIL.md"
   ]
 }

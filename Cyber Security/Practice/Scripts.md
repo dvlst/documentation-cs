@@ -46,7 +46,7 @@ file.close()
 
 # subdomain_finder
 ## Requirements
-- Braucht eine Domain als Paramter
+- Braucht eine Domain als Parameter
 - Braucht eine "subdomain.txt" mit Beispiel-Subdomains
 
 ## Code

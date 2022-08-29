@@ -221,7 +221,7 @@
 3. Hypothese formulieren (Wie geht Angreifer vor?)
 4. Threat-Hunt planen
 5. Ausführung / Datenanalyse
-6. Events unttersuchen
+6. Events untersuchen
 7. Analyse verändern / Feedback Loop
 
 ![[CleanShot 2022-08-07 at 15.49.32.png]]
@@ -362,7 +362,7 @@
 		2. SYN-ACK (Server > Client)
 		3. ACK (Client > Server)
 - Angreifer sendet SYN Requests an alle offenen Ports
-- IP-Adressen sind oftaml gespooft
+- IP-Adressen sind oftmals gespooft
 - Server antwortet mit SYN-ACK, Client sendet aber nie ACK weswegen die Verbindung ausgelastet wird
 
 ![[Pasted image 20220803200825.png]]

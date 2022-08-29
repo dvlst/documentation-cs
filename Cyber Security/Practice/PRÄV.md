@@ -43,7 +43,7 @@
 ## #XDR
 - XDR - Extended Detection and Response
 - Monitoring von mehreren Punkten über das gesamte Netzwerk
-- Scannet alle relevanten Daten
+- Scannt alle relevanten Daten
 - Kombination aus #EDR und #NDR
 
 ## #NDR
@@ -59,7 +59,7 @@
 
 ## #CTI Konsum
 - Jedes Unternehmen sollte CTI verwenden
-- Grob-Ablauf
+- Grob-Ablauf:
 1. Alert
 2. #IoC Analyse
 3. #OSINT - Open-Source Intelligence Analyse
@@ -142,11 +142,11 @@
 - Informationen über #TTP oder #CVE
 
 ### Multiplier
-- Schnell umsetzbare Informationen (via verschieden Quellen)
+- Schnell umsetzbare Informationen (via verschiedene Quellen)
 - Intelligenz welche vom Business verstanden wird
 
 ## #CTI #Framework
-- Vorgehen von Angreifern ist ein komplexer Vorgang in mehrere Schritten
+- Vorgehen von Angreifern ist ein komplexer Vorgang in mehreren Schritten
 - Wenn man den Vorgang an einer Stelle abwenden kann, kann man den Schaden minimieren
 - Beispiel eines Vorgehens eines modernen Angreifers:
 	1. Phishing Mail
@@ -176,7 +176,7 @@
 ### Diamond Modell
 - Verfolgt Angreifer über längeren Zeitraum
 - Zusatz für Cyber Kill Chain
-- Setzt sich zuammen aus
+- Setzt sich zuammen aus:
 	- Infrastructure
 	- Adversary
 	- Capabilities
@@ -189,7 +189,7 @@
 
 ## TLP
 - Traffic Light Protokoll
-- Welche Informationen können geteilt werden
+- Welche Informationen können geteilt werden?
 - TLP:RED (Nicht teilen)
 - TLP:AMBER (Eigene Organisation)
 - TLP:GREEN (Organisation und Partner)
@@ -294,7 +294,7 @@
 	- #CMDB Gap: ungepatcht weil unbekannt
 	- Control Scope Gap: ungepatcht weil nicht im Scope
 	- Control Gap: ungepatcht weil nicht ganzes Scope abgedeckt
-	- Control Quality Gap: ungepatcht weil Patch Mgmt nicht ganz funktioniert
+	- Control Quality Gap: ungepatcht weil Patch-Mgmt nicht ganz funktioniert
 - Verständnis der Systemlandschaft
 	- Was ist extern / intern
 	- Zugriff User
