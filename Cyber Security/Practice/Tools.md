@@ -60,6 +60,7 @@
 - [WinPrefetchView](https://www.nirsoft.net/utils/win_prefetch_view.html)
 - [Store Encryption Keys securely](https://www.vaultproject.io/)
 - [Man in the Middel - 2FA umgehen mit Reverse Proxy](https://github.com/kgretzky/evilginx2)
+- [Cipher Suite Info](https://ciphersuite.info/cs/)
 
 # General
 ## Add VMware share in Kali
@@ -109,6 +110,33 @@ sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs/ -o subtype=vmhgfs-fuse,allow_other
 	"||" (Logical OR)
 	"^^" (Logical XOR)
 	"!" (Logical NOT)
+
+- Nach Client Hello filtern:
+```
+ssl.handshake.extensions_server_name
+```
+
+- Nach POST Requests filtern:
+```
+http.request.method == "POST"
+```
+
+- Nach GET Requests filtern:
+```
+http.request.method == "GET"
+```
+
+### Tipps
+- Zertifikat exportieren:
+	1.  "Server Hello, Certificat, Server Hello Done" Suchen (z. B mit `tls.handshake`)
+	2. Rechtsklick "Export Package Bytes..." und Speichern als .crt
+
+![[CleanShot 2022-08-29 at 20.12.05.png]]
+
+- Private Key hinzufügen und Traffic entschlüsseln
+- Unter Wireshark > Preferences > Protocols > TLS > RSA Keys den entsprechenden Private Key hinzufügen (.pem-File)
+
+![[CleanShot 2022-08-29 at 20.48.53.png]]
 
 ## [tshark](https://tshark.dev/)
 - Package anaylizer
