@@ -1,5 +1,5 @@
-# base64_encoder
-## Requirements
+## base64_encoder
+### Requirements
 - Braucht eine "b64.txt" 
 
 ## Code
@@ -26,37 +26,43 @@ file.close()
 
 ```
 
-# bruteforce_detector
+## bruteforce_detector
 
 
-# keylogger
+## keylogger
 
 
-# pcap_anonymizer
+## pcap_anonymizer
 
 
-# pcap_finder
+## pcap_finder
 
 
-# port_scanner
+## port_scanner
 
 
-# slowloris
+## slowloris
 
 
-# subdomain_finder
-## Requirements
+## subdomain_finder
+### Requirements
 - Braucht eine Domain als Parameter
 - Braucht eine "subdomain.txt" mit Beispiel-Subdomains
 
-## Code
+### Code
+### Import / Shebang
 ```
-####################
-# import modules
-import requests
-import sys
-####################
+#!/usr/bin/env python3
 
+###########################
+# import modules
+# import sys
+# import requests
+###########################
+```
+
+### Testing Subdomains from txt
+```
 sub_list = open("subdomain.txt").read()
 subdoms = sub_list.splitlines()
 
@@ -74,7 +80,7 @@ for sub in subdoms:
 ```
 
 # xss_scanner
-## Requirements
+### Requirements
 - Braucht eine [xss_testrings](https://raw.githubusercontent.com/payloadbox/xss-payload-list/master/Intruder/xss-payload-list.txt) file
 
 ### Import / Shebang
@@ -83,8 +89,8 @@ for sub in subdoms:
 
 ###########################
 # import modules
-import sys
-import requests
+# import sys
+# import requests
 ###########################
 ```
 
