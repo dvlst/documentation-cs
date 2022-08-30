@@ -24,7 +24,7 @@
 
 ## Tasks
 - [ ] KAF von vorherigem Test dokumentieren [eTutor](https://www.ict-schlusspruefungen.ch/e-tutor/v4/user/login)
-- [ ] [ICT-Berufsbildung Hackinglab](https://ict-berufsbildung.hacking-lab.com/) Aufgaben repetieren
+- [x] [ICT-Berufsbildung Hackinglab](https://ict-berufsbildung.hacking-lab.com/) Aufgaben repetieren
 - [x] Ordnerstruktur anpassen
 - [x] Volatility Cheat Sheet Usama einbinden
 
@@ -32,8 +32,8 @@
 ### [DETE](https://siw.hacking-lab.com/events/4)
 - [x] Einführung in Python
 - [x] Python XSS-Scanner
-- [ ] Checksume Verification
-- [ ] Logfile analysis
+- [x] Checksume Verification
+- [x] Logfile analysis
 - [ ] Logile mit Python und im Terminal analysieren
 - [ ] Einführung in Wireshark
 - [ ] Listen vo VoIP phone call

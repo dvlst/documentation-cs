@@ -27,7 +27,70 @@ file.close()
 ```
 
 ## bruteforce_detector
+### Requirements
+- Braucht ein SSH-Access Log
 
+### Code
+### Import / Shebang
+```
+#!/usr/bin/env python3
+
+###########################
+import sys
+###########################
+
+```
+
+### load_log_list Funktion
+```
+###### load_log_list-Funktion ######
+def load_log_list(filename):
+# Oeffnet das File welches im Parameter 1 mitgegeben wude
+    with open(filename) as f:
+# Speichert die Zeilen in der content-Variable
+        content = f.readlines()
+# Entfernet Newline-Characters
+    content = [line.strip() for line in content]
+    return content
+###########################
+```
+
+### main Funktion
+```
+###### main-Funktion ######
+def main():
+    print("[+] Starting Log Analyzer")
+
+    print("[+] Loading Log-File")
+# Ruft das File vom Paramater 1 mit der load_log_list-Funktion auf
+    log_list = load_log_list(log_filename)
+
+# Array fuer IP-Adressen
+    login_failure_ips = [] 
+    for log_entry in log_list:
+# Sucht nach "pam_unix(sshd:auth): authentication failure;" im Logfile
+        if 'pam_unix(sshd:auth): authentication failure;' in log_entry:
+# Fuegt IP-Adressen in Array ein. Split beim "=" damit nur IP-Adresse in Array eingetragen wird.
+# [-1] damit nur der letzte Eintrag aus der Zeile (die IP-Adresse) verwendet wird.
+            login_failure_ips.append(log_entry.split('=')[-1]) 
+
+# Sortiert nach "unique" IPs
+    unique_ips = set(login_failure_ips)
+
+# Zaehlt die Anzahl Loginversueche (Anzahl der IP-Adresse in Array)
+    for ip in unique_ips:
+        number_of_failed_logins = login_failure_ips.count(ip)
+# Wenn die Zahl der Login-Versuche (Anzhal der IP-Adresse in Array)
+# grösser als der Schwellwert, dann wird die IP und die Anzahl der versuchten Logins ausgegeben
+        if number_of_failed_logins > threshold:
+            print("\n[!] Brute-Force-Attempt detected")
+            print("[!] IP: " + ip)
+            print("[!] Number of Failed Login-Attempts: " + str(number_of_failed_logins))
+###########################
+
+if __name__ == "__main__":
+    main()
+```
 
 ## keylogger
 
@@ -43,6 +106,63 @@ file.close()
 
 ## slowloris
 
+## logfile_merging
+### About
+- Von Hacking-Lab Aufgabe [CSS-05](https://ict-berufsbildung.hacking-lab.com/events/26/challenges/170)
+- Merged ein .log-File und ein .json-File in ein neues .json-File welches anaylisiert werden kann
+
+### Requirements
+- Braucht ein log-file und ein .json file
+
+### Code
+### Import / Shebang
+```
+#!/usr/bin/env python3
+
+###########################
+import sys
+import json
+import argparse
+import re
+from datetime import datetime
+###########################
+```
+
+### Other Code (not getting it)
+```
+def process_logs(access_file, forensics_file):
+  with open(access_file, 'r') as access_log, open(forensics_file, 'r') as forensics_log:
+    forensics = { x['requestId']: x for x in map(json.loads, forensics_log.readlines()) }
+    prog = re.compile(r'^(?P<requestId>.*) (?P<remoteAddress>.*) - - \[(?P<timestamp>.*)\] "(?P<verb>[A-Z]+) (?P<url>.*) (?P<version>HTTP/.*)" (?P<status>.*) (?P<responseSize>.*)$')
+    for l in access_log:
+      try:
+        obj = prog.match(l).groupdict()
+        obj['timestamp'] = datetime.strptime(obj['timestamp'], '%d/%m/%Y:%H:%M:%S %z').isoformat()
+        headers = {}
+        req = forensics.get(obj['requestId'])
+        if not req:
+          print('Could not find request {} in forensics log.'.format(obj['requestId']), file=sys.stderr)
+        else:
+          for h in filter(lambda x: x != '', req['headers'].split('\n')):
+            key, value = h.split(':')
+            headers.setdefault(key, []).append(value.strip())
+        obj['headers'] = headers
+        #write_output_log(obj)
+      except Exception as e:
+        print("Error {} on line {}".format(e, l), file=sys.stderr)
+
+def write_output_log(obj):
+  print(json.dumps(obj))
+
+if __name__ == '__main__':
+  parser = argparse.ArgumentParser(description='Process web application log files.')
+  parser.add_argument('-a', '--access', help='the acces log file to parse', default='access.log')
+  parser.add_argument('-f', '--forensics', help='the forensics log file to parse', default='forensics.json')
+
+  args = parser.parse_args()
+
+  process_logs(args.access, args.forensics)
+```
 
 ## subdomain_finder
 ### Requirements
@@ -55,9 +175,9 @@ file.close()
 #!/usr/bin/env python3
 
 ###########################
-# import modules
-# import sys
-# import requests
+import modules
+import sys
+import requests
 ###########################
 ```
 
@@ -88,9 +208,9 @@ for sub in subdoms:
 #!/usr/bin/env python3
 
 ###########################
-# import modules
-# import sys
-# import requests
+import modules
+import sys
+import requests
 ###########################
 ```
 
@@ -161,5 +281,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
