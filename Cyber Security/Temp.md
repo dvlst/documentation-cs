@@ -34,7 +34,7 @@
 - [x] Python XSS-Scanner
 - [x] Checksume Verification
 - [x] Logfile analysis
-- [ ] Logile mit Python und im Terminal analysieren
+- [x] Logfile mit Python und im Terminal analysieren
 - [ ] Einführung in Wireshark
 - [ ] Listen vo VoIP phone call
 - [ ] TCP-Traffic untersuchen und Reverse Shell bauen
