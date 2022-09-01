@@ -1,68 +1,7 @@
-# Links
-## Malware
+# General
+## Reverse Shell
 - [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
-### Unzugeordnet
-- [SANS Open Source Faculty Tools](https://www.sans.org/img/free-faculty-tools.pdf)
-- [Microsoft Driver Analysis](https://www.microsoft.com/en-us/wdsi/driversubmission)
-- [Parrot OS](https://www.parrotsec.org/)
-- [#metasploit](https://www.metasploit.com/)
-- [Log4J scanner](https://github.com/mergebase/log4j-detector)
-- [Piracy Tools Reddit](https://www.reddit.com/r/Piracy/wiki/megathread/tools)
-- [Virustotal](https://www.virustotal.com/gui/home/upload)
-- [DES Cracker](https://crack.sh/)
-- [Canary Tokens (Traps for Hacker)](https://canarytokens.org/generate#)
-- [PwnDoc (Pentest Reporting)](https://github.com/pwndoc/pwndoc)
-- [2FA for SSH](https://github.com/google/google-authenticator-libpam)
-- [tcpdump](https://www.tcpdump.org/)
-- [ngrep](https://github.com/jpr5/ngrep)
-- [Open Source Network Visualizer](https://www.elastic.co/elastic-stack/)
-- [Windows Sysinternals](https://docs.microsoft.com/en-us/sysinternals/)
-- [john (Open Password encrypted .zip)](https://github.com/openwall/john/blob/bleeding-jumbo/src/zip2john.c)
-- [ldapdomaindump: AD information via LDAP](https://github.com/dirkjanm/ldapdomaindump)
-- [FEODO Botnet C&C servers](https://feodotracker.abuse.ch/)
-- [radareorg: reverse engineering](https://github.com/radareorg/radare2)
-- [Prometheus and Grafana (Monitoring Solution)](https://prometheus.io/docs/visualization/grafana/)
-- [Checkmk (Monitoring Solution)](https://checkmk.com/)
-- [Cyber Chef (Check possible Hashes etc)](https://gchq.github.io/CyberChef/)
-- [GeoIP and other Tools](https://hackertarget.com/geoip-ip-location-lookup/)
-- [MITRE ATT&CK Framework](https://attack.mitre.org/)
-- [MITRE ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/)
-- [inotify (Monitor files)](https://man7.org/linux/man-pages/man7/inotify.7.html)
-- [Free Cyber Security Tools - CISA](https://www.cisa.gov/free-cybersecurity-services-and-tools)
-- [Cyberchef | Decoding and Encrypting](https://gchq.github.io/CyberChef/)
-- [dnscat2 | DNS Tunnel](https://github.com/iagox86/dnscat2)
-- [Subnet Calculator](https://www.site24x7.com/tools/ipv4-subnetcalculator.html)
-- [IP Lookup](https://www.maxmind.com/en/home)
-- [Tails: Secure Linux](https://tails.boum.org/)
-- [Coding in Browser](https://replit.com/)
-- [#CVSS Calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
-- [#CVSS Alternative: BSI-Schwachstellenbeurteilung](https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Buerger-CERT-Sicherheitshinweise/Risikostufen/risikostufen.html)
-- [Mail Spam Test](https://www.mail-tester.com/)
-- [RegExr: Learn / Build / Test RegEx](https://regexr.com/)
-- [Codepasting](https://paste.ofcode.org/)
-- [Memory Dump (forensic / Timesketch)](https://timesketch.org/)
-- [Threat Research](https://otx.alienvault.com/)
-- [Decrypt Hashes](https://hashes.com/en/decrypt/hash)
-- [Hacking-Lab VM](https://livecd.hacking-lab.com/)
-- [HexEd.it](https://hexed.it/)
-- [#CIS-Benchmark](https://www.cisecurity.org/cis-benchmarks/)
-- [Stig Benchmark](https://www.stigviewer.com/stigs)
-- [OpenVAS | Vulnerability Scanner](https://www.openvas.org/)
-- [Cuckoo Sandbox](https://cuckoosandbox.org/)
-- [ghidra: Software Reverse Engineering](https://github.com/NationalSecurityAgency/ghidra)
-- [AlienVault | Open Source Threat Intelligence](https://otx.alienvault.com/)
-- [spiderfoot | Automated OSINT](https://www.spiderfoot.net/)
-- [Threat Intelligence Tool](https://pulsedive.com/)
-- [Open Source Threat Intelligence Tools](https://www.misp-project.org/)
-- [Insecure WebApplication - Webgoat](https://owasp.org/www-project-webgoat/)
-- [py2exe](https://stackabuse.com/creating-executable-files-from-python-scripts-with-py2exe/)
-- [WinPrefetchView](https://www.nirsoft.net/utils/win_prefetch_view.html)
-- [Store Encryption Keys securely](https://www.vaultproject.io/)
-- [Man in the Middel - 2FA umgehen mit Reverse Proxy](https://github.com/kgretzky/evilginx2)
-- [Cipher Suite Info](https://ciphersuite.info/cs/)
-
-# General
 ## Add VMware share in Kali
 1. Add share over VMware GUI
 2. In Kali Linux edit /etc/fstab
@@ -353,77 +292,87 @@ python-snappy==0.6.1
 python3 vol.py -f memdump.raw windows.info
 ```
 
-- Show Process Tree:
+- Network Info from Windows
 ```
-py vol.py -f memdump.raw windows.pslist
+python3 vol.py -f memdump.raw windows.netscan
+```
+
+- Show Process Tree
+```
+python3 vol.py -f memdump.raw windows.pslist
+```
+
+- Show Hidden Processes
+```
+python3 vol.py -f memdump.raw windows.psscan
 ```
 
 - Filter process tree after filename
 ```
-python vol.py -f memdump.raw windows.pslist | Select-String filename
+python3 vol.py -f memdump.raw windows.pslist | Select-String filename
 ```
 
 - Filter Windows Handles after PID
 ```
-python vol.py -f memdump.raw windows.handles --pid 1328
+python3 vol.py -f memdump.raw windows.handles --pid 1328
 ```
 
 - Filter Windows Handles after PID and type
 ```
-python vol.py -f memdump.raw windows.handles --pid 1328 | Select-String File | more
+python3 vol.py -f memdump.raw windows.handles --pid 1328 | Select-String File | more
 ```
 
 - Dump all files associated with PID 3784.
 ```
-python vol.py -f [ImageName]windows.dumpfiles.DumpFiles --pid 3784 |
+python3 vol.py -f memdump.raw windows.dumpfiles.DumpFiles --pid 3784 |
 ```
 
 - See executed programs with command option history.
 ```
-python vol.py -f [ImageName] windows.cmdline.CmdLine
+python3 vol.py -f memdump.raw windows.cmdline.CmdLine
 ```
 
 - See active network connections and listening programs.
 ```
-python vol.py -f [ImageName] windows.netstat
+python3 vol.py -f memdump.raw windows.netstat
 ```
 
 - Dump the Windows user password hashes.
 ```
-python vol.py -f [ImageName] windows.hashdump.Hashdump
+python3 vol.py -f memdump.raw windows.hashdump.Hashdump
 ```
 
 - Print out the Windows Registry UserAssist.
 ```
-python vol.py -f [ImageName] windows.registry.userassist.UserAssist
+python3 vol.py -f memdump.raw windows.registry.userassist.UserAssist
 ```
 
 - List all available Windows Registry hives in memory.
 ```
-python vol.py -f [ImageName] windows.registay.hivelist.HiveList
+python3 vol.py -f memdump.raw windows.registay.hivelist.HiveList
 ```
 
 - Dump the ntuser hive based on a keyword filter.
 ```
-python vol.py -f [ImageName] -o "dump" windows.registry.hivelist --filter Doe\ntuser.dat --dump
+python3 vol.py -f memdump.raw -o "dump" windows.registry.hivelist --filter Doe\ntuser.dat --dump
 ```
 
 - Print a specific Windows Registry key.
 ```
-python vol.py -f [ImageName] windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" --recurse
+python3 vol.py -f memdump.raw] windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" --recurse
 ```
 
 - Print a specific Windows Registry key, subkeys and values.
 ```
-python vol.py -f [ImageName] windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" --recurse
+python vol.py -f memdump.raw windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" --recurse
 ```
 
 - Save memdump to a .dmp file
 ```
-python3 vol.py -f /Users/usamaguenedi/Library/CloudStorage/OneDrive-activelan.ch/02_Cyber\ Security/01_REAC/ftp_mem.raw windows.memmap.Memmap  --pid 368 -–dump
+python3 vol.py -f memdump.raw windows.memmap.Memmap  --pid 368 -–dump
 ```
 
-- Use Grep to find something in the .dmp file
+- ( Use Grep to find something in the .dmp file)
 ```
 strings pid.368.dmp | grep "filename" | grep -v “filetype”
 ```
@@ -438,29 +387,54 @@ python vol.py -f memdump.raw imageinfo
 python vol.py -f memdump.raw kdbgscan
 ```
 
+- Network Info from Windows
+```
+python vol.py --profile=Win7SP1x86_23418 netscan -f memdump.raw 
+```
+
+- Network Info from Linux
+```
+python vol.py --profile=SomeLinux -f memdump.raw linux_ifconfig
+```
+
 - Show Process Tree:
 ```
-python -f memdump.raw --profile=Win7SP1x86 pslist
+python vol.py -f memdump.raw --profile=Win7SP1x86 pslist
 ```
 
 - Create a executable.exe file with PID
 ```
-python vol.py -f ftp_mem.raw --profile=Win7SP1x86_23418 procdump --dump-dir . -p 368
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 procdump --dump-dir . -p 368
 ```
 
 - Create a executable.exe with physical memory adress
 ```
-python vol.py -f ftp_mem.raw --profile=Win7SP1x86_23418 dumpfiles -Q 0x000000007dd6e038 -D .
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 dumpfiles -Q 0x000000007dd6e038 -D .
 ```
 
 - Search memdump after filename
 ```
-python vol.py -f ftp_mem.raw --profile=Win7SP1x86_23418 filescan | grep -i filename
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i filename
 ```
 
 - Search memdump after file-extension
 ```
-python vol.py -f ftp_mem.raw --profile=Win7SP1x86_23418 filescan | grep -i filename | grep -v filetype
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i filename | grep -v filetype
+```
+
+- Search memdump after Windows Service Records
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 svcscan
+```
+
+- Search memdump after COMMAND_HISTORY
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 cmdscan
+```
+
+- Search memdump after CONSOLE_Informations
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 consoles
 ```
 
 ### [MemProcFS](https://github.com/ufrisk/MemProcFS)
@@ -627,3 +601,63 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 - Stellt Events dar
 
 ![[CleanShot 2022-08-23 at 20.43.19.png]]
+
+## Links to other Tools
+- [SANS Open Source Faculty Tools](https://www.sans.org/img/free-faculty-tools.pdf)
+- [Microsoft Driver Analysis](https://www.microsoft.com/en-us/wdsi/driversubmission)
+- [Parrot OS](https://www.parrotsec.org/)
+- [#metasploit](https://www.metasploit.com/)
+- [Log4J scanner](https://github.com/mergebase/log4j-detector)
+- [Piracy Tools Reddit](https://www.reddit.com/r/Piracy/wiki/megathread/tools)
+- [Virustotal](https://www.virustotal.com/gui/home/upload)
+- [DES Cracker](https://crack.sh/)
+- [Canary Tokens (Traps for Hacker)](https://canarytokens.org/generate#)
+- [PwnDoc (Pentest Reporting)](https://github.com/pwndoc/pwndoc)
+- [2FA for SSH](https://github.com/google/google-authenticator-libpam)
+- [tcpdump](https://www.tcpdump.org/)
+- [ngrep](https://github.com/jpr5/ngrep)
+- [Open Source Network Visualizer](https://www.elastic.co/elastic-stack/)
+- [Windows Sysinternals](https://docs.microsoft.com/en-us/sysinternals/)
+- [john (Open Password encrypted .zip)](https://github.com/openwall/john/blob/bleeding-jumbo/src/zip2john.c)
+- [ldapdomaindump: AD information via LDAP](https://github.com/dirkjanm/ldapdomaindump)
+- [FEODO Botnet C&C servers](https://feodotracker.abuse.ch/)
+- [radareorg: reverse engineering](https://github.com/radareorg/radare2)
+- [Prometheus and Grafana (Monitoring Solution)](https://prometheus.io/docs/visualization/grafana/)
+- [Checkmk (Monitoring Solution)](https://checkmk.com/)
+- [Cyber Chef (Check possible Hashes etc)](https://gchq.github.io/CyberChef/)
+- [GeoIP and other Tools](https://hackertarget.com/geoip-ip-location-lookup/)
+- [MITRE ATT&CK Framework](https://attack.mitre.org/)
+- [MITRE ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/)
+- [inotify (Monitor files)](https://man7.org/linux/man-pages/man7/inotify.7.html)
+- [Free Cyber Security Tools - CISA](https://www.cisa.gov/free-cybersecurity-services-and-tools)
+- [Cyberchef | Decoding and Encrypting](https://gchq.github.io/CyberChef/)
+- [dnscat2 | DNS Tunnel](https://github.com/iagox86/dnscat2)
+- [Subnet Calculator](https://www.site24x7.com/tools/ipv4-subnetcalculator.html)
+- [IP Lookup](https://www.maxmind.com/en/home)
+- [Tails: Secure Linux](https://tails.boum.org/)
+- [Coding in Browser](https://replit.com/)
+- [#CVSS Calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
+- [#CVSS Alternative: BSI-Schwachstellenbeurteilung](https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Buerger-CERT-Sicherheitshinweise/Risikostufen/risikostufen.html)
+- [Mail Spam Test](https://www.mail-tester.com/)
+- [RegExr: Learn / Build / Test RegEx](https://regexr.com/)
+- [Codepasting](https://paste.ofcode.org/)
+- [Memory Dump (forensic / Timesketch)](https://timesketch.org/)
+- [Threat Research](https://otx.alienvault.com/)
+- [Decrypt Hashes](https://hashes.com/en/decrypt/hash)
+- [Hacking-Lab VM](https://livecd.hacking-lab.com/)
+- [HexEd.it](https://hexed.it/)
+- [#CIS-Benchmark](https://www.cisecurity.org/cis-benchmarks/)
+- [Stig Benchmark](https://www.stigviewer.com/stigs)
+- [OpenVAS | Vulnerability Scanner](https://www.openvas.org/)
+- [Cuckoo Sandbox](https://cuckoosandbox.org/)
+- [ghidra: Software Reverse Engineering](https://github.com/NationalSecurityAgency/ghidra)
+- [AlienVault | Open Source Threat Intelligence](https://otx.alienvault.com/)
+- [spiderfoot | Automated OSINT](https://www.spiderfoot.net/)
+- [Threat Intelligence Tool](https://pulsedive.com/)
+- [Open Source Threat Intelligence Tools](https://www.misp-project.org/)
+- [Insecure WebApplication - Webgoat](https://owasp.org/www-project-webgoat/)
+- [py2exe](https://stackabuse.com/creating-executable-files-from-python-scripts-with-py2exe/)
+- [WinPrefetchView](https://www.nirsoft.net/utils/win_prefetch_view.html)
+- [Store Encryption Keys securely](https://www.vaultproject.io/)
+- [Man in the Middel - 2FA umgehen mit Reverse Proxy](https://github.com/kgretzky/evilginx2)
+- [Cipher Suite Info](https://ciphersuite.info/cs/)

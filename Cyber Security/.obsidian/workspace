@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Practice/Scripts.md",
+            "file": "Practice/Tools.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#",
+                "query": "consoles",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Practice/Scripts.md",
+                "file": "Practice/Tools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Practice/Scripts.md",
+                "file": "Practice/Tools.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Practice/Scripts.md"
+                "file": "Practice/Tools.md"
               }
             }
           }
@@ -131,15 +132,15 @@
   },
   "active": "878f0a06fe7c062a",
   "lastOpenFiles": [
+    "Temp.md",
+    "Links.md",
     "Practice/Tools.md",
-    "Practice/DETE.md",
     "Practice/Scripts.md",
+    "Practice/DETE.md",
     "Theory/BUDG.md",
     "Theory/PRMA.md",
     "Theory/ITIL.md",
     "Theory/SYEN.md",
-    "Practice/Network.md",
-    "Practice/REAC.md",
-    "Temp.md"
+    "Practice/Network.md"
   ]
 }
