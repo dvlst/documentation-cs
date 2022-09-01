@@ -1,5 +1,6 @@
 {
   "fileSortOrder": "byCreatedTimeReverse",
   "promptDelete": false,
-  "attachmentFolderPath": "Pictures"
+  "attachmentFolderPath": "Pictures",
+  "readableLineLength": true
 }

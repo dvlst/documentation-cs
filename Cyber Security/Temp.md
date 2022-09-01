@@ -29,14 +29,17 @@
 - [x] Volatility Cheat Sheet Usama einbinden
 
 ## Hacking Lab
-### [DETE](https://siw.hacking-lab.com/events/4)
 - [x] Einführung in Python
 - [x] Python XSS-Scanner
 - [x] Checksume Verification
 - [x] Logfile analysis
 - [x] Logfile mit Python und im Terminal analysieren
-- [ ] Einführung in Wireshark
-- [ ] Listen vo VoIP phone call
+- [ ] Memory Forensics, Part 1
+- [ ] Memory Forensics, Part 2
+- [ ] Un-Structured Data Analysis
+
+- [ ] Plaso & Timesketch
+- [ ] Listen to VoIP phone call
 - [ ] TCP-Traffic untersuchen und Reverse Shell bauen
 - [ ] HTTP Header Streams
 - [ ] SSL misconfigurations

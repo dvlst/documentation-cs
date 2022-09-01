@@ -3,12 +3,16 @@
 - Braucht eine "b64.txt" 
 
 ## Code
+### Import / Shebang
 ```
 ####################
 # import modules
 import base64
 ####################
+```
 
+### File lesen
+```
 # Open a file
 file = open('b64.txt',mode='r')
 
@@ -128,40 +132,96 @@ from datetime import datetime
 ###########################
 ```
 
-### Other Code (not getting it)
+### main-Funktion
 ```
-def process_logs(access_file, forensics_file):
+###### main-Funktion ######
+def main(access_file, forensics_file):
   with open(access_file, 'r') as access_log, open(forensics_file, 'r') as forensics_log:
-    forensics = { x['requestId']: x for x in map(json.loads, forensics_log.readlines()) }
-    prog = re.compile(r'^(?P<requestId>.*) (?P<remoteAddress>.*) - - \[(?P<timestamp>.*)\] "(?P<verb>[A-Z]+) (?P<url>.*) (?P<version>HTTP/.*)" (?P<status>.*) (?P<responseSize>.*)$')
+
+# Dictionary für forensic.json-Einträge
+    forensics = {}
+
+# forensic.json wird Zeile für Zeil in lines-Variable eingelesen
+    lines = forensics_log.readlines()
+# Lädt Zeile für Zeile der forensic.json in das forensics-Dictionary
+    for l in lines:
+# json.loads() Methode parsed JSON Strigs und konvertiert diese für das Dicitionary
+      forensics_json = json.loads(l)
+      forensics[forensics_json['requestId']] = forensics_json
+
     for l in access_log:
       try:
-        obj = prog.match(l).groupdict()
+        obj = {}
+# Splitten der einzelnen Felder im access.log
+        obj['requestId'] = l.split()[0]
+        obj['remoteAddress'] = l.split()[1]
+        obj['timestamp'] = l.split("[")[1].split("]")[0]
+        obj['verb'] = l.split("\"")[1].split()[0]
+        obj['url'] = l.split()[7]
+        obj['version'] = l.split()[8][:-1]
+        obj['status'] = l.split()[9]
+        obj['responseSize'] = l.split()[10]
+# Zeit in ISO-Format umwandeln / darstellen
         obj['timestamp'] = datetime.strptime(obj['timestamp'], '%d/%m/%Y:%H:%M:%S %z').isoformat()
-        headers = {}
+
+
+# Zusammenfügen des access.log mit dem forensic.log File anhand der requestID
         req = forensics.get(obj['requestId'])
+
+
+
+# Split für Headers-Teil im forensic.json
+        headers = {}
         if not req:
           print('Could not find request {} in forensics log.'.format(obj['requestId']), file=sys.stderr)
         else:
-          for h in filter(lambda x: x != '', req['headers'].split('\n')):
-            key, value = h.split(':')
-            headers.setdefault(key, []).append(value.strip())
+# Aufsplitten der header bei jedem NewLineCharacter
+          for h in req['headers'].split('\n'):
+# Aufsplitten anhand des Doppelpunktes
+# (bspw. User-Agent:Mozilla/5.0 wird zu [0] = User-Agent, [1] = Mozilla/5.0 im headers-Dictionary)
+            header_name = h.split(":")[0]
+            header_value = h.split(":")[1]
+# headers.keys fügt header_name und header_value in ein Array
+# falls headers_name noch nicht in headers.keys (neues array für headers) ist wird der Key im Array erstellt und schreibt den header_value readlines
+# falls der headers_name schon im headers.keys ist (doppelnennung) wird der header_value hinten im array angehängt (Bspw. so: ['www.hacking-lab.com','www.neueURL.com'])
+            if header_name not in headers.keys():
+              headers[header_name] = [header_value]
+            else:
+              headers[header_name].append(header_value)
+
+        print (headers)
+# Ersetzen des headers Teil im forensic Dictionary durch den gesplitteten header aus dem headers Dict
         obj['headers'] = headers
-        #write_output_log(obj)
+# Aufrufen der write_output_log-Funktion
+        write_output_log(obj)
+
       except Exception as e:
         print("Error {} on line {}".format(e, l), file=sys.stderr)
+###########################
+```
 
+### write_output_log-Funktion
+```
+###### write_output_log-Funktion ######
 def write_output_log(obj):
-  print(json.dumps(obj))
+  # The json. dumps() method allows us to convert a python object into an equivalent JSON object. Or in other words to send the data from python to json.
+#  print(json.dumps(obj))
+  print(test)
+```
 
+### Argument-Parsing
+```
 if __name__ == '__main__':
-  parser = argparse.ArgumentParser(description='Process web application log files.')
-  parser.add_argument('-a', '--access', help='the acces log file to parse', default='access.log')
-  parser.add_argument('-f', '--forensics', help='the forensics log file to parse', default='forensics.json')
+# Argument-Parsing
+    parser = argparse.ArgumentParser(description='Process web application log files.')
+    parser.add_argument('-a', '--access', help='the acces log file to parse', default='access.log')
+    parser.add_argument('-f', '--forensics', help='the forensics log file to parse', default='forensics.json')
 
-  args = parser.parse_args()
+    args = parser.parse_args()
 
-  process_logs(args.access, args.forensics)
+# Argumente für main-Funktion
+    main(args.access, args.forensics)
+###########################
 ```
 
 ## subdomain_finder
