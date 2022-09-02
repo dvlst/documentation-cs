@@ -252,8 +252,28 @@ SecRule RESPONSE_BODY "@verifyCC \d{13,16}" "phase:4,id:1,t:none,log,capture,
 - [Cheat Sheet Tools Volatility Commands](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-examples)
 - [Volatility Command Reference](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference)
 
+### Volatility 2 install Windows
+- Clone Repository from GitHub
+```
+git clone https://github.com/volatilityfoundation/volatility.git
+```
+
+- Make sure Python27 is installed
+- Add Python27 to PATH System Variable (/Path/to/Python27/ & /Path/to/Python27/Scripts/)
+- Rename python.exe (Python3) to python3.exe (%APPDATA%/Local/Programs/Python/Python310/)
+- Install Visual C++ for Python27 from [Wayback Machine](https://web.archive.org/web/20190720195601/http://www.microsoft.com/en-us/download/confirmation.aspx?id=44266)
+
+- Install distorm3 with pip
+```
+pip install distorm3
+```
+- Install pycrypto with pip
+```
+pip install pycrypto
+```
+
 ### Volatility3 install Windows
-- Clone Repository from Github
+- Clone Repository from GitHub
 ```
 git clone https://github.com/volatilityfoundation/volatility3.git
 ```
@@ -661,3 +681,4 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 - [Store Encryption Keys securely](https://www.vaultproject.io/)
 - [Man in the Middel - 2FA umgehen mit Reverse Proxy](https://github.com/kgretzky/evilginx2)
 - [Cipher Suite Info](https://ciphersuite.info/cs/)
+- [SQLite Viewer](https://inloop.github.io/sqlite-viewer/)

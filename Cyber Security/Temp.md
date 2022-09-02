@@ -23,7 +23,7 @@
 - Überprüft und bewertet die Leistung und Wirksamkeit des Schwachstellen- und Patchmanagements periodisch und schlägt bei Bedarf Verbesserungsmassnahmen vor
 
 ## Tasks
-- [ ] KAF von vorherigem Test dokumentieren [eTutor](https://www.ict-schlusspruefungen.ch/e-tutor/v4/user/login)
+- [x] KAF von vorherigem Test dokumentieren [eTutor](https://www.ict-schlusspruefungen.ch/e-tutor/v4/user/login)
 - [x] [ICT-Berufsbildung Hackinglab](https://ict-berufsbildung.hacking-lab.com/) Aufgaben repetieren
 - [x] Ordnerstruktur anpassen
 - [x] Volatility Cheat Sheet Usama einbinden
@@ -34,8 +34,8 @@
 - [x] Checksume Verification
 - [x] Logfile analysis
 - [x] Logfile mit Python und im Terminal analysieren
-- [ ] Memory Forensics, Part 1
-- [ ] Memory Forensics, Part 2
+- [x] Memory Forensics, Part 1
+- [x] Memory Forensics, Part 2
 - [ ] Un-Structured Data Analysis
 
 - [ ] Plaso & Timesketch

@@ -533,7 +533,7 @@
 - Eher wenig Speicherplatz
 - Beispiele:
 	- SQL-Tabellen
-	- CSV-Files ohne Header$
+	- CSV-Files ohne Header
 
 ### Semi-Strukturierte Daten
 - Daten definieren Struktur

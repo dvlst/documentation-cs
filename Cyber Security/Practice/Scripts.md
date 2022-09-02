@@ -98,6 +98,8 @@ if __name__ == "__main__":
 
 ## keylogger
 
+## pcap_decoder
+
 
 ## pcap_anonymizer
 
@@ -110,10 +112,11 @@ if __name__ == "__main__":
 
 ## slowloris
 
+
 ## logfile_merging
 ### About
 - Von Hacking-Lab Aufgabe [CSS-05](https://ict-berufsbildung.hacking-lab.com/events/26/challenges/170)
-- Merged ein .log-File und ein .json-File in ein neues .json-File welches anaylisiert werden kann
+- Merged Einträge eines eines .log-Files und eines .json-Files damit es analysiert werden kann
 
 ### Requirements
 - Braucht ein log-file und ein .json file
