@@ -17,6 +17,12 @@ sudo mkdir -p /mnt/hgfs/
 sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs/ -o subtype=vmhgfs-fuse,allow_other
 ```
 
+## Hacking
+### [hashcat](https://hashcat.net/hashcat/)
+```
+hashcat -m 0 --show hash-file rockyou.txt
+```
+
 # Linux
 ## sha1sum
 - SHA1 Checksum von Datei anzeigen:
@@ -464,7 +470,7 @@ python vol.py -f memdump.raw --profile=Win7SP1x86_23418 consoles
 MemProcFs.exe -device memory-dump.raw -forensic 1 
 ```
 
-## log2timeline / [plaso](https://www.kali.org/tools/plaso/)
+## log2timeline / [plaso](https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html)
 - Plaso-File aus vhdx oder memory dump erstellen
 - vhdx-File mit Disk2vhd aus Sysinternals erstellen auf Windows
 - Plaso-File erstellen:

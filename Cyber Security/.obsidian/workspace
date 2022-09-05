@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "pcap",
+                "query": "break",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -131,15 +131,15 @@
   },
   "active": "878f0a06fe7c062a",
   "lastOpenFiles": [
-    "Theory/BUDG.md",
     "Temp.md",
+    "Links.md",
     "Practice/Scripts.md",
     "Practice/DETE.md",
-    "Practice/Tools.md",
-    "Links.md",
+    "Practice/PRÄV.md",
+    "Theory/BUDG.md",
     "Theory/PRMA.md",
+    "Practice/Tools.md",
     "Theory/ITIL.md",
-    "Theory/SYEN.md",
-    "Practice/Network.md"
+    "Theory/SYEN.md"
   ]
 }

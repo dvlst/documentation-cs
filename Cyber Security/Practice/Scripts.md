@@ -35,6 +35,8 @@ file.close()
 - Braucht ein SSH-Access Log
 
 ### Code
+### About
+
 ### Import / Shebang
 ```
 #!/usr/bin/env python3
@@ -112,6 +114,111 @@ if __name__ == "__main__":
 
 ## slowloris
 
+## logfile_merging_simple
+### About
+- Von Hacking-Lab Aufgaben [Un)Structured Data: Analysis](https://siw.hacking-lab.com/events/4/curriculumevents/15/challenges/34)
+- Merged Einträge eines .log-Files und eines .db-Files damit es analyisiert werden kann
+
+### Requirements
+- Braucht ein log-file und ein dazugehöriges .db file
+
+### Code
+### Import / Shebang
+```
+#!/usr/bin/env python3
+
+#########################
+from datetime import datetime
+import sqlite3
+import json
+###########################
+```
+
+### Main-Funktion
+```
+###### main-Funktion ######
+def main():
+    print("[+] Starting Log-Enhancer")
+    jsonFileW = open('data.json', 'w')
+    jsonFileW.close()
+
+    with open(r'accesslog.txt', 'r') as f:
+        for line in f:
+# Funktionen Aufrufen um einzelne Zeilen in Variablen zu speichern
+            session_id = get_session_id(line)
+            remote_addr = get_remote_addr(line)
+            http_method = get_http_method(line)
+            http_uri = get_http_uri(line)
+            http_status = get_http_status(line)
+            http_response_size = get_http_size(line)
+            timestamp = get_new_timestamp(line)
+            user = get_user(session_id)
+# Dictionary mit JSON-Elementen erstellen und Variablen einfüllen
+            event = {
+                "timestamp": timestamp,
+                "session_id": session_id,
+                "user": user,
+                "remote_addr": remote_addr,
+                "http_method": http_method,
+                "http_uri": http_uri,
+                "http_status": http_status,
+                "http_response_size": http_response_size            }
+
+# JSON-File erstellen (data.json mit append öffnen und json.dumps von event dict mit zusätzlichen NewLines schreiben)
+            jsonString = json.dumps(event, indent=2)
+            jsonFileA = open('data.json', 'a')
+            jsonFileA.write(jsonString)
+            jsonFileA.write('\n')
+            jsonFileA.close()
+###########################
+```
+
+### Zeilen einlesen
+```
+# Funktionen um einzelne Zeilen auszulesen und zu splitten
+###########################
+def get_session_id(line):
+    return line.split()[0]
+def get_remote_addr(line):
+    return line.split()[2]
+def get_http_method(line):
+    return line.split()[7][1:]
+def get_http_uri(line):
+    return line.split()[8]
+def get_http_status(line):
+    return line.split()[10]
+def get_http_size(line):
+    return line.split()[11]
+###########################
+```
+
+### timestamp
+```
+# Definition um den timestamp zu erstellen
+###########################
+def get_new_timestamp(line):
+    time_str = line.split("[")[1].split("]")[0]
+    datetime_object = datetime.strptime(time_str, '%d/%b/%Y:%H:%M:%S %z')
+    return int(datetime.timestamp(datetime_object))
+###########################
+```
+
+### session_id
+```
+# Definition für session_id aus database file zu holen
+###########################
+def get_user(session_id):
+    conn  = sqlite3.connect(r'database.db')
+    cur = conn.cursor()
+    for row in cur.execute("SELECT username FROM user_sessions WHERE id=?", (session_id,)):
+        conn.close()
+        return row[0]
+###########################
+
+
+if __name__ == '__main__':
+    main()
+```
 
 ## logfile_merging
 ### About
@@ -119,7 +226,7 @@ if __name__ == "__main__":
 - Merged Einträge eines eines .log-Files und eines .json-Files damit es analysiert werden kann
 
 ### Requirements
-- Braucht ein log-file und ein .json file
+- Braucht ein log-file und ein dazugehöriges .json file
 
 ### Code
 ### Import / Shebang
@@ -208,8 +315,8 @@ def main(access_file, forensics_file):
 ###### write_output_log-Funktion ######
 def write_output_log(obj):
   # The json. dumps() method allows us to convert a python object into an equivalent JSON object. Or in other words to send the data from python to json.
-#  print(json.dumps(obj))
-  print(test)
+	print(json.dumps(obj))
+	print(test)
 ```
 
 ### Argument-Parsing
