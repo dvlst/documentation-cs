@@ -17,6 +17,13 @@ sudo mkdir -p /mnt/hgfs/
 sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs/ -o subtype=vmhgfs-fuse,allow_other
 ```
 
+## [CyberChef](https://gchq.github.io/CyberChef/)
+- Tool zum encoden von gängigen Verschlüsselungsmethoden
+
+## grep
+- Filtern von Logs
+- [Syntax](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+
 ## Hacking
 ### [hashcat](https://hashcat.net/hashcat/)
 ```
@@ -482,17 +489,64 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 - Plaso-File anaylisieren mit GUI
 - [Search query Guide](https://timesketch.org/guides/user/search-query-guide/)
 
-## Memory Dump
-
-## Cyberchef
-
-## grep
-- Filtern von Logs
-- [Syntax](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
-
-
 # Security
-## #metasploit
+## [Nessus](https://www.tenable.com/downloads/nessus?loginAttempted=true)
+- Vulnerability Scanner
+- Detection von Vulnerabilities
+- Simliert Angriffe auf gewisse Vulnerabilities
+- Führt Netzwerkscans aus
+- Scannt nach Misconfigurations, Open Ports, DDOS Vulnerability, Passwords
+
+### Installation
+- [Download](https://www.tenable.com/downloads?loginAttempted=true)
+- Zugriff auf localhost: https://localhost:8834/
+
+## [#Metasploit](https://www.section.io/engineering-education/getting-started-with-metasploit-framework/)
+- Penetration Testing
+- Network Scanning 
+- Zugriff auf Kommandozeile: `msfconsole`
+	- Muss in PATH sein
+
+### Syntax
+1. Passendes Modul suchen:
+```
+search type:exploit platform:windows multi/handler
+```
+
+2. Modul benutzen
+```
+use exploit/multi/handler
+```
+
+3. Informationen über Modul herausfinden
+```
+info
+```
+
+4. Optionen anzeigen was definiert werden muss
+```
+show
+```
+
+5. Optionen setzen (bspw.)
+```
+set LHOST 10.10.10.10
+```
+
+6. Exploit duchführen
+```
+exploit
+```
+
+- Einen Schritt zurückgehen
+```
+back
+```
+
+- Metasploit verlassen
+```
+exit
+```
 
 ## [#MITRE](https://attack.mitre.org/)
 - MITRE Adversarial Tactics, Techniques & Common Knowlegde
@@ -543,7 +597,7 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 	- Local Policies
 
 ## [#AIDE](https://www.redhat.com/sysadmin/linux-security-aide)
-- Advanced Inttrusion Detection Environment
+- Advanced Intrusion Detection Environment
 - Intrusion Detection Tool für Linux
 	- Log Analyse
 	- Malware Detecion
@@ -572,12 +626,13 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 ## [Virustotal](https://www.virustotal.com/gui/home/upload)
 - Online Antivirenscanner mit vielen bekannten Scannern
 
-## [Nessus](https://www.tenable.com/downloads/nessus?loginAttempted=true)
-- Vulnerability Scanner
-- Detection von Vulnerabilities
-- Simliert Angriffe auf gewisse Vulnerabilities
-- Führt Netzwerkscans aus
-- Scannt nach Misconfigurations, Open Ports, DDOS Vulnerability, Passwords
+## [sqlmap](https://www.geeksforgeeks.org/use-sqlmap-test-website-sql-injection-vulnerability/)
+- #SQLi Penetration Testing Tool
+- Zugriff auf Kommandozeile: `sqlmap.py`
+	- Muss in PATH sein
+
+### Syntax
+
 
 ## fail2ban
 - Intrusion Prevention Tool
@@ -585,12 +640,6 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 - Blockiert IP bei definierter Anzahl Versuche in gewisser Zeitspanne
 
 # Monitoring
-## inotify
-
-## checkmk
-
-## Prometheus & Grafana
-
 ## #ELK Stack
 - Zentralisiertes Logging System
 - Kann mit #SIEM für Analyse erweitert werden
@@ -628,6 +677,21 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 
 ![[CleanShot 2022-08-23 at 20.43.19.png]]
 
+## [inotify](https://linux.die.net/man/7/inotify)
+- Linux Built-in Tool um Dateien / Verzeichnise zu überwachen
+
+## [checkmk](https://docs.checkmk.com/latest/en/intro_setup.html)
+- OpenSource Monitoring Tool
+- Monitoring von Applikationen / Servern / Netzwerk
+- Gratios in RAW Edition
+
+## [Prometheus](https://prometheus.io/) / [Grafana](https://prometheus.io/docs/visualization/grafana/)
+- Opensource Monitoring Tool
+- Monitoring von Applikationen / Servern / Netzwerk
+- Entwickelt für [Kubernetes](https://kubernetes.io/)
+	- Container Lösung für Deployment von bspw. Docker-Containern
+- Grafana wird als Web-GUI verwendet
+
 ## Links to other Tools
 - [SANS Open Source Faculty Tools](https://www.sans.org/img/free-faculty-tools.pdf)
 - [Microsoft Driver Analysis](https://www.microsoft.com/en-us/wdsi/driversubmission)
@@ -650,13 +714,11 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 - [radareorg: reverse engineering](https://github.com/radareorg/radare2)
 - [Prometheus and Grafana (Monitoring Solution)](https://prometheus.io/docs/visualization/grafana/)
 - [Checkmk (Monitoring Solution)](https://checkmk.com/)
-- [Cyber Chef (Check possible Hashes etc)](https://gchq.github.io/CyberChef/)
 - [GeoIP and other Tools](https://hackertarget.com/geoip-ip-location-lookup/)
 - [MITRE ATT&CK Framework](https://attack.mitre.org/)
 - [MITRE ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/)
 - [inotify (Monitor files)](https://man7.org/linux/man-pages/man7/inotify.7.html)
 - [Free Cyber Security Tools - CISA](https://www.cisa.gov/free-cybersecurity-services-and-tools)
-- [Cyberchef | Decoding and Encrypting](https://gchq.github.io/CyberChef/)
 - [dnscat2 | DNS Tunnel](https://github.com/iagox86/dnscat2)
 - [Subnet Calculator](https://www.site24x7.com/tools/ipv4-subnetcalculator.html)
 - [IP Lookup](https://www.maxmind.com/en/home)

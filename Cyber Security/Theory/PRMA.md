@@ -20,6 +20,38 @@
 - Periodische Entscheidungsintervalle
 - Erfahrene Mitarbeiter aus verschiedenen Bereichen
 
+## Projektkommunikation
+### Aufgaben des Teams
+- Selbständiges Ausführen der Arbeiten laut Projektplan
+- regelm. Statusmeldungen
+- Lösungswege mit Projektleitung abstimmen
+- An Teamsitzungen Teilnehem
+- Konstruktive / Kreative Lösungen finden
+
+### Teamentwicklung
+1. Teambildung (Forming)
+2. Orientierung (Warming)
+3. Konfrontation (Storming)
+4. Organisation (Norming)
+5. Leistung (Performing)
+6. Auflösung (Adjourning)
+
+### Projektstatusbericht
+- 1. Gute Nachrichten 2. Kritische Aspekte
+- Magisches Dreieck
+
+![[CleanShot 2022-09-06 at 19.59.15.png]]
+
+### Projektabschlussbericht
+- Summary
+- Ausgangslage
+- Auftrag / Ziel / Erreichte Lösungen
+- Budget / Ressourcen
+- Planung & Durchführung
+- Organisation (Analyse und Beurteilung Projektorganisation)
+- Zusammenfassung der Erkenntnisse
+- Antrag (Offene Massnahmen)
+
 ## Formen
 ### Linien- / Stablinien Projektorganisation
 - Keine formale Weisungsrechte
@@ -153,12 +185,29 @@
 
 ![[CleanShot 2022-07-26 at 21.15.14.png]]
 
+# Dokumentationsmanagement
+- Projektdokument: nur Projektbezug, Gegenwartsbezogen (bzw. Vergangenheit)
+- Ergebnis-/ Betriebsdokumente: Zukünftige Nutzung
+
+## Change Requests
+- Änderungsantrag
+- Geordnetes Änderungsantragsverfahren
+- Beinhaltet Ausgangslage, Details der Änderung, Aufwandschätzungen, Konsequenzen bei Nichteintreten
+
+## Business Process Reengineering
+- Geschäftsprozessoptimierung
+- Verbesserung der Geschäftsprozesse
+
+## Change Management
+. Veränderungen / Umstellungen Organisationsstruktur / Prozessen / System
 
 # Vorgehensmodelle
 ## Zweck
 - Fasst die Erfahrungen verschiedener Projekte zusammen
 - Vorgehensleitfaden für Um- und Neugestaltung von Systemen
 - Unterstützt Projekleiter
+
+![[CleanShot 2022-09-06 at 19.35.56.png]]
 
 ## Vorgehen
 - Prädiktives Vorgehen
@@ -291,9 +340,6 @@
 ### PMI
 - Prozessorientierte Beschreibung
 - Initierung > Planung > Ausführung
-
-### #SCRUM
-
 
 # #Earned-Value
 - Diagnose von Arbeitspaketen

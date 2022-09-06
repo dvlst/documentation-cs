@@ -127,10 +127,10 @@
     5. Kommunikation verläuft symmetrisch und / oder komplementär
 - Schulz von Thun Kommunikationsquadrat
 	- Jede Nachricht kann mit 4 "Schnäbeln" / Ebenen interpretiert werden
-	- Sachebene
-	- Selbstoffenbarungsebene
-	- Beziehungsebene
-	- Appellebene
+	- Sachebene (Inhalt, Daten, Fakten)
+	- Selbstoffenbarungsebene (Selbstdarstellung, Zwischen den Zeilen)
+	- Beziehungsebene  (Emotionale Ebene)
+	- Appellebene (Absicht, Was will ich mit Aussage erreichen?)
 - Körpersprache ist wichtig
 	- Körperhaltung / Bewegung
 	- Mimik, Gestik, Augenkontakt
