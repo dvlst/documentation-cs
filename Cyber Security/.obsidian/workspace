@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cyberchef",
+                "query": "event management",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -130,17 +129,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9714d3cb5423217d",
+  "active": "878f0a06fe7c062a",
   "lastOpenFiles": [
+    "Practice/Scripts.md",
+    "Theory/ITIL.md",
+    "Practice/PRÄV.md",
+    "Practice/Tools.md",
     "Theory/PRMA.md",
     "Practice/DETE.md",
     "Theory/PERF.md",
     "Theory/SYEN.md",
     "Temp.md",
-    "Practice/Scripts.md",
-    "Links.md",
-    "Practice/PRÄV.md",
-    "Theory/BUDG.md",
-    "Practice/Tools.md"
+    "Links.md"
   ]
 }

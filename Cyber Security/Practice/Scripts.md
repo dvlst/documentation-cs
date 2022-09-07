@@ -36,6 +36,9 @@ file.close()
 
 ### Code
 ### About
+- Von Hackinglab Aufgabe [Logfile mit Pythin und im Terminal analysieren](https://siw.hacking-lab.com/events/4/curriculumevents/5/challenges/70)
+- Scannt Logfile nach "pam_unix(sshd:auth): authentication failure;" und zählt IP-Adressen
+- Wenn Anzahl IP-Adressen > Threshold dann wir die IP-Adresse ausgegeben
 
 ### Import / Shebang
 ```
@@ -44,7 +47,6 @@ file.close()
 ###########################
 import sys
 ###########################
-
 ```
 
 ### load_log_list Funktion

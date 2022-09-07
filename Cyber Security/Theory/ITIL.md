@@ -200,18 +200,135 @@
 ## Service Operations
 ### Event Management
 - Identifizieren und Analysieren von Events
+- Event = Zufälliges, messbares und beobachtbares Ereignis, das für das Management der IT-Infrastrukutr von Bedeutung ist
+	- Beispiel: Warnung das ein Storage-Grenzwert erreicht wurde, Ausfall eines Services
+- Event Management Prozess:
+	1. Erkennen / aufzeichnen des Events
+	2. Event untersuchen / filtern
+	3. Korrelation festellen / Ursache ermitteln
+	4. Lösen des Events / Ableiten von Massnahmen
+	5. Schliessen des Events
 
 ### Incident Management
-- Wiederherstellung des normalen Servicebetriebs
+- Wiederherstellung des normalen Servicebetriebs (Business IT Services)
+- Incident = Ereignis, das nicht zum standardmässigen Betrieb eines Services gehört und tatsächlich oder potenziell eine Unterbrechung oder Verminderung der Service-Qualität verursacht
 - Minimierung von Störungen
+- Incident Management Prozess
+	1. Störung erkennen / protokollieren
+	2. Störung kategorisieren / priorisieren
+	3. Störung untersuchen / diagnostizieren (Iteration)
+	4. Störung lösen/ Sevice wiederherstellen
+	5. Störung schliessen
+- Wichtige Aspekte:
+	- Priorisierung von Incidents (nach Impact & Urgency)
+	- Bearbeitungszeiten (Interventionszeit & Reaktionszeit & Behebungszeit)
+	- Hierarchische Eskalation bei Nichteinhaltung der Bearbeitungszeiten
 
 ### Request Fulfilment
 - Bearbeiten von Requests der Anwender
+- Requests = Standardisierte Anfragen / Anliegen
+- Service Request = Eine formale Anfrage/Anliegen eines Leistungsbeziehers
+	- Beispiel: Passwort zurücksetzen / Workstation aufsetzen
+- Auftragsanliegen
+	- Zum Beispiel: Umzug / Installation Workstation
+- Informationsanliegen
+	- "Wie kann ich ...?"-Fragen
+	- Zum Beispiel: Frage zu Excelfunktion
+- Request Fulfilment Prozess:
+	1. Eröffnen des Requests
+	2. Genehmigen des Requests
+	3. Ausführen / Weiterleiten des Requests (Iteration)
+	4. Schliessen des Requests
+- Wichtige Aspekte:
+	- Arten von Auftragsanliegen mit Erbringungszeit
+	- Genehmigung des Auftragsanliegen
 
 ### Problem Management
-- Ursachenanalyse zum Beseitigen von Problemen
+- Ursachenanalyse zum Beseitigen von Problemen (Inciodents)
 - Minimieren der Auswirkungen von Incidents
+- Problem = Unbekannte Ursache für einen oder mehrere Incidents
+- Knowsn Error =  Problem mit einer dokumentierten Ursache und einer Lösungen / einen Workaround
+- Problem Management Prozess
+	1. Probleme erkennen / protokollieren
+	2. Probleme kategorisieren / priorisieren
+	3. Probleme untersuchen / diagnostizieren
+	4. Probleme lösen
+	5. Probleme schliessen
+- Wichtige Aspekte:
+	- Priorisierung von Problemen
+	- Nach welcher Methode wird die RCA (Root Cause Analyse) druchgeführt > 5-Why-Methode
+
+![[CleanShot 2022-09-07 at 09.49.10.png]]
 
 ### Access Management
 - Berechtigungen vergeben / verwalten
+
+### Service Level Management
+- Definition & Reporting #SLA / #OLA 
+- Service Level Management Prozess:
+	1. Erstellen / Vereinbaren / Warten der SLAs
+	2. Überwachen / Rapportieren der SLA-Leistungen
+	3. Durchführen von Business IT Service Reviews
+	4. Definieren von Business IT Service Verbesserungen
+- Operational Level Management Prozess:
+	1. Erstellen / Vereinbaren / Warten der OLAs
+	2. Überwachen / Rapportieren der OLA-Leistungen
+	3. Durchführen von IT Service Reviews
+	4. Definieren von IT Service Verbesserungen
+
+### Service Catalog Management
+- Ziel: Aktueller und vollumfänglicher Service-Catalog (SK)
+- Service Catalog = Datenbank oder Strukturiertes Dokument mit Informationen zu Services
+- Beinhaltet Business IT Services (Kundenbezogen) und IT Services (Interne Informatik)
+- Service Catalog Management Prozess:
+	1. Definieren SK-Anforderungen
+	2. Erstellen / Warten SK-Struktur
+	3. Verteilen  / Publizieren SK
+	4. Erstellen / Warten SK Inhalt (Fortlaufend)
+- Wichtige Aspekte:
+	- Eventuelle Nutzung des SK als Self Service Portal oder nur als Informationsquelle
+	- Eventuell HW / SW über Katalog bestellen
+	- Eventuell #SLA / #OLA ersichtlich
+	- Eventuell verschiedene Ansichten für verschiedene Benutzer
+
+### Requirement Management
+- Bedürfnisse / Anforderungen des Leistungsbeziehers aufnehmen und abarbeiten
+- Requirement = Nicht standardisiertes Anliegen
+
+### Change Management
+- Veränderungen im Informatik Umfeld kontrolliert in den Betrieb einführen
+- Change = Hinzufügen, Modifizieren oder Entfernen eines IT-Elements, das Auswirkungen auf die Business IT Services haben könnte
+- Request for Change (RfC) = Formular zur Erfassung aller relevanter Details für eine gewünschte Änderung an einem IT-Element
+- Change Management Prozess:
+	1. Änderungen aufnehmen / kategorisieren
+	2. Änderungen analyisieren / beurteilen
+	3. Änderungen planen / genehmigen
+	4. Koordination der Änderungseinführung
+	5. Änderungen verifizieren / schliessen
+- Wichtige Aspekte:
+	- Inhalt eines RfC
+	- Change-Types
+		- Normal
+		- Emergency = Notfallmässige Änderung / Auswirkung auf IT Business Services
+		- Standard = Wiederholende Veränderung / Bereits genehmigt
+	- Change-Kategorien
+	- Change-Durchführungszeiten
+
+### Service Continuity Management
+- Support
+	- Jeder kennt im Notfall seine Rolle und weiss, wie er handeln muss.
+	- Im Notfall sind alle nötigen Informationen griffbereit und genau abzuarbeiten.
+- Service-Design
+	- Kosten bei Schäden im Blick behalten
+	- Risikominderung einplanen
+	- Versicherungen schliessen
+	- Recovery Planen
+- Training / Testing
+	- Regelmässiges Testen für den Notfall
+	- Trainings durchführen, damit jeder genau weiss, wie er handeln muss
+- Review
+	- Regelmässiges evaluieren
+	- Einschätzen, ob die Massnahmen noch aktuell sind
+
+
 

