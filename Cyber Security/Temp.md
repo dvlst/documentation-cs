@@ -15,7 +15,6 @@
 - [x] Un-Structured Data Analysis
 
 - [ ] Plaso & Timesketch
-- [ ] Listen to VoIP phone call
 - [ ] TCP-Traffic untersuchen und Reverse Shell bauen
 - [ ] HTTP Header Streams
 - [ ] SSL misconfigurations

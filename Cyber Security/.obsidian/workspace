@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "event management",
+                "query": "log2timeline",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -131,15 +132,15 @@
   },
   "active": "878f0a06fe7c062a",
   "lastOpenFiles": [
-    "Practice/Scripts.md",
+    "Temp.md",
     "Theory/ITIL.md",
+    "Practice/Network.md",
     "Practice/PRÄV.md",
     "Practice/Tools.md",
+    "Practice/Scripts.md",
     "Theory/PRMA.md",
     "Practice/DETE.md",
     "Theory/PERF.md",
-    "Theory/SYEN.md",
-    "Temp.md",
-    "Links.md"
+    "Theory/SYEN.md"
   ]
 }

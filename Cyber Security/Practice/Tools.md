@@ -630,6 +630,7 @@ exit
 - #SQLi Penetration Testing Tool
 - Zugriff auf Kommandozeile: `sqlmap.py`
 	- Muss in PATH sein
+- Mit `sql-query` [SQL-Requests](https://i-am-takuma.medium.com/sqlmap-cheat-sheet-8dc29054528c) durchführen
 
 ### Syntax
 - Alles (DBs / Tabellen) auf Website anzeigen(dauert lange):
@@ -652,12 +653,12 @@ sqlmap.py -u [GET-URL] --dbs
 sqlmap.py -u [URL mit GET] -D [Databasename] --tables
 ```
 
-- Zeilen von bestimmter Tabelle anzeigen:
+- Spalten von bestimmter Tabelle anzeigen:
 ```
 sqlmap.py -u [URL mit GET] -D [Databasename] -T [Tablename] --columns
 ```
 
-- Daten von bestimmter Zeile anzeigen:
+- Daten von bestimmter Spalten anzeigen:
 ```
 sqlmap.py -u [URL mit GET] -D [Databasename] -T [Tablename] -C [Columname] --dump
 ```
