@@ -23,6 +23,24 @@ sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs/ -o subtype=vmhgfs-fuse,allow_other
 - Filtern von Logs
 - [Syntax](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 
+## [json2csv](https://www.npmjs.com/package/json2csv)
+- Tool zum konvertieren von JSON zu CSV
+- Benötigt [NodeJS](https://nodejs.org/en/)
+
+### Syntax
+- Installation
+```
+sudo npm install -g json2csv 
+```
+
+- Aus JSON File CSV generieren
+```
+json2csv -i [JSON-Pfad] -o [CSV-Pfad]
+```
+
+### Alternative MacOS
+- Excel > Data > Get Data > From Text > UTF-8 > Delimiter definieren
+
 ## [Amnesia](https://github.com/dTsitsigkos/Amnesia)
 - Anonymization Tool
 - [Alternative](https://arx.deidentifier.org/downloads/)
