@@ -61,3 +61,4 @@
 - [#TLS-Handshake Explained](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/)
 - [What is Nessus?](https://www.tenable.com/downloads/nessus?loginAttempted=true)
 - [What is #GRC?](https://www.convercent.com/blog/what-is-grc-and-how-does-grc-impact-operational-risk)
+- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)

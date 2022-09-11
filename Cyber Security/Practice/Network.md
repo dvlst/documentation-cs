@@ -118,23 +118,26 @@
 - Austausch von E-Mails
 - Kein standarmässiger Schutz
 
-## TLS
+## #TLS
 - Transport Layer Security
 - Verschlüsselungsstandard bei Datenübertragung
 - OSI Layer 5
 - Integrity and Confidentiality (CIA-Triad)
+- Nur Version TLS 1.2 / 1.3 Sicher
+	- Tiefere Versionen können als Sicherheitslücke bewertet werden
 
 ### Schlüssel
 - Verwendet Schlüsselaustausch-Protokoll
 	- #RSA (Nur öffentliche Schlüssel austauschen)
+	- #RSA = Asymmetrischer Algorithmus
 
 ### Cipher-Suite
 - Bestimmt Paramter der Sitzung
-- Asymetrische Verschlüsselung für Verbindungsaufbau (Private Key / Public Key Verschlüsselung)
+- Asymmetrische Verschlüsselung für Verbindungsaufbau (Private Key / Public Key Verschlüsselung)
 - Symmetrische Verschlüsselung für Traffic
 - Mögliche Probleme:
 	- Ungültige Zertifikate
-	- Unsichere Cipher-Suite
+	- Unsichere Cipher-Suite (zum Beispiel MD5)
 - Protokolle welche TLS verwenden:
 	- FTPS
 	- LDAPS
@@ -143,20 +146,38 @@
 	- SMTPS
 
 ### #TLS-Handshake
-1. Client / Server einigen sich auf Verschlüsselung
-2. Client verifiziert Identität
-	- #Chain-of-Trust 
-	- CA
-3. Asymmetrische Kryptographie
-	- Schlüsselaustausch für Verbindungsaufbau
-4. Symmetrische Kryptographie
-	- Schlüssel für Verbindung verwenden
+- Kurzfassung:
+	1. Client / Server einigen sich auf Verschlüsselung
+	2. Client verifiziert Identität
+		- #Chain-of-Trust  / CA
+	3. Asymmetrische Kryptographie
+		- Schlüsselaustausch für Verbindungsaufbau
+	4. Symmetrische Kryptographie
+		- Schlüssel für Verbindung verwenden
+
+- Genauere Beschreibung
+	1. Aushandeln eines gemeinsamen Schlüssels (Protokoll zur Aushandlung und festlegen des gemeinsamen Schlüssels (DH oder RSA)
+	2. Authentisierung der Gegenstelle (Server auf jeden Fall, Client optional (mutual auth)) (RSA)
+	3. Aushandeln der Meldungsverschlüsselung (AES, ChaCha20, IDEA, andere) (Warum wird hier nicht RSA verwendet?)
+	4. Aushandeln der Meldungsintegrität (SHA, HMAC)
+
+- Ablauf:
+```
+Client    Server
+   --------->     Client Hello (Cipher Suites, Random Number)
+   <---------     Server Hello (Cipher Suites, Random Number, Server Certificate, allenfalls Client Zertifikat anfordern)
+   --------->     Client Zertifikate, Key Exchange (unterschiedlich, ob RSA / DH)
+   <---------     Key Exchange
+   --------->     HTTPS Request
+   <---------     HTTPS Response
+   ...
+```
 
 ### CA
 - Certificate Authority
 - Verifiziert Public Key
 - Stellt Zertifikate aus
-- #Chain-of-Trust für Vertrauesnwürdigkeit der Zertifikate
+- #Chain-of-Trust für Vertrauenswürdigkeit der Zertifikate
 
 ## VPN
 - Virtual Private Network

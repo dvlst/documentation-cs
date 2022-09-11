@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Practice/Tools.md",
+            "file": "Practice/CVSS.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "log2timeline",
+                "query": "nessus",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Practice/Tools.md",
+                "file": "Practice/CVSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Practice/Tools.md",
+                "file": "Practice/CVSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Practice/Tools.md"
+                "file": "Practice/CVSS.md"
               }
             }
           }
@@ -132,15 +131,15 @@
   },
   "active": "878f0a06fe7c062a",
   "lastOpenFiles": [
-    "Temp.md",
-    "Theory/ITIL.md",
     "Practice/Network.md",
     "Practice/PRÄV.md",
+    "Practice/CVSS.md",
+    "Pasted image 20220910144634.png.md",
+    "Pasted image 20220910144105.png.md",
+    "Links.md",
+    "Pasted image 20220910141055.png.md",
+    "Theory/SYEN.md",
     "Practice/Tools.md",
-    "Practice/Scripts.md",
-    "Theory/PRMA.md",
-    "Practice/DETE.md",
-    "Theory/PERF.md",
-    "Theory/SYEN.md"
+    "Practice/Scripts.md"
   ]
 }

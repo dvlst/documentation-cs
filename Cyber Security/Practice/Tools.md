@@ -1,4 +1,4 @@
-# General
+**sudo apt clean**# General
 ## Reverse Shell
 - [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
@@ -100,7 +100,7 @@ http.request.method == "GET"
 ![[CleanShot 2022-08-29 at 20.12.05.png]]
 
 - Private Key hinzufügen und Traffic entschlüsseln
-- Unter Wireshark > Preferences > Protocols > TLS > RSA Keys den entsprechenden Private Key hinzufügen (.pem-File)
+- Unter Wireshark > Preferences > Protocols > TLS > #RSA Keys den entsprechenden Private Key hinzufügen (.pem-File)
 
 ![[CleanShot 2022-08-29 at 20.48.53.png]]
 
@@ -699,6 +699,10 @@ sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/spac
 
 ![[CleanShot 2022-09-07 at 12.00.18.png]]
 
+## [hydra](https://techyrick.com/hydra-full-tutorial/)
+- Passwort Cracker
+- Nativ in Kali
+
 ## fail2ban
 - Intrusion Prevention Tool
 - Analyisiert Logfiles
@@ -815,3 +819,4 @@ sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/spac
 - [Man in the Middel - 2FA umgehen mit Reverse Proxy](https://github.com/kgretzky/evilginx2)
 - [Cipher Suite Info](https://ciphersuite.info/cs/)
 - [SQLite Viewer](https://inloop.github.io/sqlite-viewer/)
+- [XSS Payload Strings](https://swisskyrepo.github.io/PayloadsAllTheThingsWeb/XSS%20Injection/#common-payloads)
