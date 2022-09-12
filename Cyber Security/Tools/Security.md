@@ -97,6 +97,15 @@ exit
 	- Audittrail / Logbuch für jede Aktion auf dem Server erstellen
 	- Grundlage für Angriff-Detektion
 
+### CIS Benchmark Windows Server 2019
+![[CIS_Microsoft_Windows_Server_2019_Benchmark_v1.3.0.pdf]]
+
+### CIS Benchmark Debian 10
+![[CIS_Debian_Linux_10_Benchmark_v1.0.0.pdf]]
+
+### CIS Benchamark RHEL 8
+![[CIS_Red_Hat_Enterprise_Linux_8_Benchmark_v2.0.0.pdf]]
+
 ### [HardeningKitty](https://github.com/scipag/HardeningKitty)
 - Alternativer Hardening Guide
 - CIS-Benchmark ist Teil davon
