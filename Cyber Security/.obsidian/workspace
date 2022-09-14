@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tools/Security.md",
+            "file": "Tools/Scripts.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "anonymizer",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,11 +57,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 188.5
+    "width": 294.5
   },
   "right": {
     "id": "c1114240c2f56da0",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Security.md",
+                "file": "Tools/Scripts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/Security.md",
+                "file": "Tools/Scripts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/Security.md"
+                "file": "Tools/Scripts.md"
               }
             }
           }
@@ -129,17 +130,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "878f0a06fe7c062a",
+  "active": "9714d3cb5423217d",
   "lastOpenFiles": [
-    "x-media/CIS_Debian_Linux_10_Benchmark_v1.0.0.pdf",
     "Tools/Security.md",
-    "x-media/CIS_Microsoft_Windows_10_Enterprise_Benchmark_v1.12.0.pdf",
+    "Tools/Network.md",
+    "Tools/General.md",
+    "Tools/Forensic.md",
+    "Tools/Monitoring.md",
+    "Tools/Linux.md",
     "Tools/Scripts.md",
     "Information/Links.md",
-    "School/PRÄV.md",
-    "Tools/General.md",
-    "Tools/Links.md",
     "Information/CVSS.md",
-    "Information/Network.md"
+    "x-media/CIS_Debian_Linux_10_Benchmark_v1.0.0.pdf"
   ]
 }
