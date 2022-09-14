@@ -1,3 +1,20 @@
+## SSH
+- Secure Shell
+- Kommunikation zwischen zwei Geräten
+	- Dateiaustausch (SCP - Secure Copy)
+	- Remote Access auf Command Line
+- Asymmetrische Kryptographie oder Passwort für Authentifizierung
+
+### Erstellen von Asymmetrischen Schlüsseln
+- Schlüssel generieren
+```
+ssh-keygen -t rsa
+```
+- Key auf anderes System kopieren
+```
+ssh-copy-id [USER]@[HOSTNAME]
+```
+
 ## Wireshark
 - Paket-Basierte Proktolle anaylisieren
 - Decodieren von Paketen
@@ -78,11 +95,70 @@ http.request.method == "GET"
 pip3 install scapy
 ```
 
-## tcpdump
+## [Netcat](https://linuxize.com/post/netcat-nc-command-with-examples/)
+- Tool zum scannen und abhören von Ports
+- Kann in Kombination mit Wireshark genutzt werden
 
-## ngrep
+### Syntax
+- TCP Port öffnen und abhören:
+```
+nc -l [Port]
+```
 
-## dnscat2
+-  TCP Port öffnen, abhören: und Output in File schreiben:
+```
+nc -l [Port] > file
+```
+
+- Datei senden:
+```
+nc -l [IP] [Port] < file
+```
+
+- Port-Scan:
+```
+nc -z -v [Target-IP/Domain]
+```
+
+## [tcpdump](https://danielmiessler.com/study/tcpdump/)
+- Netzwerkanalyse Tool für Kommandozeile
+
+### Syntax
+- Standard-Interface abhören:
+```
+tcpdump -i eth0
+```
+
+- Gewisses Netz abhören:
+```
+tcpdump net [Network]
+```
+
+- Gewissen Source Port abhören:
+```
+tcpdump src port [PORT]
+```
+
+- Gewisses Protokoll abhören
+```
+tcpump [Protocolname]
+```
+
+## [ngrep](https://linuxhint.com/how-to-use-ngrep/)
+- Alternatives Netzwerkanalyse Tool zu WireShark und tcpdum
+
+## [dnscat2](https://www.hackingarticles.in/dnscat2-application-layer-cc/)
+- C2 Tunnel über DNS
+- Installation
+```
+sudo apt install dnscat2
+```
+
+### Syntax
+- Verbindung herstellen
+```
+dnscat --dns=server=[Target-IP],port=53
+```
 
 ## #nmap
 - Host-Detektion

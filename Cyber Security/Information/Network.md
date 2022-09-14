@@ -184,13 +184,6 @@ Client    Server
 - Virtueller Tunnel zwischen verschiedenen Standorten
 - Tunnel ist verschlüsselt
 
-## SSH
-- Secure Shell
-- Kommunikation zwischen zwei Geräten
-	- Dateiaustausch (SCP - Secure Copy)
-	- Remote Access auf Command Line
-- Asymmetrische Kryptographie oder Passwort für Authentifizierung
-
 # Netzwerkbegriffe
 ## Paket
 - Geschlossene Dateneinheit
