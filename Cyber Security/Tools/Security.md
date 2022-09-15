@@ -9,6 +9,13 @@
 - [Download](https://www.tenable.com/downloads?loginAttempted=true)
 - Zugriff auf localhost: https://localhost:8834/
 
+### Requirements
+- Für PDF Exports muss Java installiert sein
+- Unter Ubuntu:
+```
+sudo apt install default-jdk
+```
+
 ## [#Metasploit](https://www.section.io/engineering-education/getting-started-with-metasploit-framework/)
 - Penetration Testing
 - Network Scanning 
