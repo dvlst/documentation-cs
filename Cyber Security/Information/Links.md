@@ -23,6 +23,7 @@
 - [#SQLi Explained](https://www.w3schools.com/sql/sql_injection.asp)
 - [Analyzing memdump with volatility](https://flikk.blog/2021/01/13/analyzing-a-memory-dump-for-malicious-activity-with-volatility/)
 - [What is DLP (Data Loss Prevention)?](https://www.fortinet.com/resources/cyberglossary/dlp)
+- [AbuselPDB | Check IP Adress](https://www.abuseipdb.com/)
 
 
 ## Guides
@@ -63,3 +64,4 @@
 - [What is Nessus?](https://www.tenable.com/downloads/nessus?loginAttempted=true)
 - [What is #GRC?](https://www.convercent.com/blog/what-is-grc-and-how-does-grc-impact-operational-risk)
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+- [Malware Analysis Sandbox](https://thehackernews.com/2022/03/how-to-build-custom-malware-analysis.html)

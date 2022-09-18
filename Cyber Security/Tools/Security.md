@@ -16,6 +16,10 @@
 sudo apt install default-jdk
 ```
 
+## [ZAP](https://www.zaproxy.org/getting-started/)
+- Alternative zu Nessus
+- Kann Subsites und Ports scannen von Website
+
 ## [#Metasploit](https://www.section.io/engineering-education/getting-started-with-metasploit-framework/)
 - Penetration Testing
 - Network Scanning 
