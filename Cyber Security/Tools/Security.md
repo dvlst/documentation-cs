@@ -234,7 +234,7 @@ sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/spac
 
 ## [hydra](https://techyrick.com/hydra-full-tutorial/)
 - Passwort Cracker
-- Nativ in Kali
+- Nativ in Kali installiert
 
 ## [fail2ban](https://webdock.io/en/docs/how-guides/security-guides/how-configure-fail2ban-common-services)
 - Intrusion Prevention Tool
