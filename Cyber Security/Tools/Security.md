@@ -18,7 +18,12 @@ sudo apt install default-jdk
 
 ## [ZAP](https://www.zaproxy.org/getting-started/)
 - Alternative zu Nessus
+- Vulnerability Scanner / Proxy / Traffic Interception
 - Kann Subsites und Ports scannen von Website
+
+## [Burp Suite](https://portswigger.net/burp/documentation/desktop/tutorials)
+- Alternative zu Nessus
+- Vulnerability Scanner / Proxy / Traffic Interception
 
 ## [#Metasploit](https://www.section.io/engineering-education/getting-started-with-metasploit-framework/)
 - Penetration Testing
@@ -235,3 +240,17 @@ sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/spac
 - Intrusion Prevention Tool
 - Analyisiert Logfiles
 - Blockiert IP bei definierter Anzahl Versuche in gewisser Zeitspanne
+
+## [dirbuster](https://www.kali.org/tools/dirbuster/)
+- Brute Force Directories von Websiten
+- Standardmässig auf Kali installiert
+
+### Syntax
+- Starten
+```
+dirbuster
+```
+
+- Seite scannen (Wordlist unter: /usr/share/dirbuster/wordlists/)
+
+![[CleanShot 2022-09-19 at 20.26.33.png]]
