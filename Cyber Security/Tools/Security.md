@@ -20,6 +20,47 @@ sudo apt install default-jdk
 - Alternative zu Nessus
 - Vulnerability Scanner / Proxy / Traffic Interception
 - Kann Subsites und Ports scannen von Website
+- Gibt [CWE-ID](https://cwe.mitre.org/) von Sicherheitslücken aus
+
+### Vorgehen
+1. Foxproxy in Chrome / Firefox installieren
+2. Neuer Proxy hinzufügen (Standardmässig bei ZAP Aktiv)
+
+![[CleanShot 2022-09-21 at 15.11.15.png]]
+
+3. ZAP Proxy aktivieren und Seite neu laden
+
+![[CleanShot 2022-09-21 at 15.12.07.png]]
+
+4. In ZAP Rechtsklick auf Seite > Attack
+	- Spider für schnellen Scan / Active für ausführlichen Scan
+
+![[CleanShot 2022-09-21 at 15.13.05.png]]
+
+5. Schwachstellen / Alerts werden unten angezeigt
+
+![[CleanShot 2022-09-21 at 15.14.19.png]]
+
+6. Durch auswählen von Alert werden Informationen wie GET-URL / CWE ID / Description / Risk / Confidence / Angriffsvorgehen (Attack) angezeigt
+
+![[CleanShot 2022-09-21 at 15.15.10.png]]
+
+### Login beibehalten bei Scan
+1. Währen ZAP Proxy an ist auf Seite einloggen
+2. POST Login Request > Rechtsklick > Flags as Context > Default Context
+![[CleanShot 2022-09-21 at 15.41.32.png]]
+
+3. User erfassen
+![[CleanShot 2022-09-21 at 15.42.33.png]]
+
+4. Passwort / Username in Authentication erfassen
+![[CleanShot 2022-09-21 at 15.45.14.png]]
+
+5. Include in Context auswählen
+![[CleanShot 2022-09-21 at 15.49.52.png]]
+
+6. Bei einem neuen Attack kann nun der User ausgewählt werden
+![[CleanShot 2022-09-21 at 15.50.25.png]]
 
 ## [Burp Suite](https://portswigger.net/burp/documentation/desktop/tutorials)
 - Alternative zu Nessus

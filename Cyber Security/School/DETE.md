@@ -480,6 +480,7 @@
 	- ```<script>alert(1)</script>``` zum testen
 - #SQLi - SQL Injections
 	- SQL Code bei Anfrage (z. B. Eingabefelder) übertragen welche dann ausgeführt wird
+	- `'or '1'='1` zum testen (bei Logins)
 
 ### APT (Advanced Persistent Threats)
 - Gezielte Angriffe auf Organisation

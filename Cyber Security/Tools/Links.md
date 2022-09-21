@@ -50,6 +50,7 @@
 - [Threat Intelligence Tool](https://pulsedive.com/)
 - [Open Source Threat Intelligence Tools](https://www.misp-project.org/)
 - [Insecure WebApplication - Webgoat](https://owasp.org/www-project-webgoat/)
+-  [Insecure WebApplication - DVWA](https://github.com/digininja/DVWA)
 - [py2exe](https://stackabuse.com/creating-executable-files-from-python-scripts-with-py2exe/)
 - [WinPrefetchView](https://www.nirsoft.net/utils/win_prefetch_view.html)
 - [Store Encryption Keys securely](https://www.vaultproject.io/)

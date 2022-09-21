@@ -105,6 +105,18 @@
 - Ablauf der Kostenbeeinflussbarkeit im #Wasserfallmodell
 ![[CleanShot 2022-07-20 at 20.50.08.png]]
 
+###  Break-Even-Point (BEP)
+- Gesamterlös = Gesamtkosten
+- Übergang von Verlustzone in Gewinnzone
+- Gewinn = 0
+- BEP = Fixkosten / (Verkaufspreis - Variable Stückkosten)
+
+### Total Cost of Ownership (TCO)
+- Gesamtkosten einer Lösung über Gesamte Lebensdauer
+- Lebenszeitkosten
+- Direkte Kosten = Einzelkosten = Budgetierte Kosten (TCO-Konzept)
+- Indirekte Kosten = Gemeinkosten = Unbudgetierte Kosten (TCO-Konzept)
+
 # Agile ICT-Vorhaben
 ### #SCRUM
 - Entwicklet für Effektiveres Zusammenarbeiten von Produktteams
@@ -210,7 +222,7 @@
 - Radikale Dezentralisierung (aka #Holocracy)
 
 ### Vorteile
-- Leistung wir nicht anhand von Zielen bewertet / belohnt
+- Leistung wird nicht anhand von Zielen bewertet / belohnt
 - Vergütung dient nicht Verhaltensbeeinflussung, sondern Erfolsgbeteiligung im Nachhinein
 - Anreizen zum Eingehen von Risiken
 - Kontinuierliche Massnahmenplanung
@@ -269,6 +281,19 @@
 - Ziele festgelegt, keine Massnahmen
 - Kein lernen aus der Vergangenheit
 
+## Anforderungen
+- Budgets sollen motivieren
+- Budgets sollen klar und exakt formuliert sein 
+- Budget soll die Flexibilität im Unternehmen nicht einschränken 
+- Das Budget sollte zeitlich abgestimmt sein 
+- Das Budget soll zukunftsbezogen sein
+
+### Kostenorientierter Ansatz
+- Senkung der Kosten
+
+### Leistungsorientierter Ansatz
+- Erhöhung der Leistungfähigkeit
+
 ## Durchführung der Budgetierung
 1. Budgetrunden
 	- Vorgaben / Stufengerechtes Herunterbrechen
@@ -294,6 +319,10 @@
 	- Reicht das Geld für die Ressourcenplanung?
 	- Wird auf Schätzungen / Extrapolation / Marktforschung / Ziele geplant
 4. Budgets zusammenfassen
+
+## Budget / Forecast
+- Budgetierung = Planung
+- Forecast = Wissenstand über aktuelle Geschäftsentwicklung
 
 
 

@@ -168,9 +168,24 @@ python vol.py --profile=Win7SP1x86_23418 netscan -f memdump.raw
 python vol.py --profile=SomeLinux -f memdump.raw linux_ifconfig
 ```
 
-- Show Process Tree:
+- Show Process Tree
 ```
 python vol.py -f memdump.raw --profile=Win7SP1x86 pslist
+```
+
+- Show all running processes with full command line used
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86 cmdline
+```
+
+- Dump an executable file
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86 -p PID -D folder/
+```
+
+- Show the NTLM hash of the all users
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86 hashdump
 ```
 
 - Create a executable.exe file with PID
