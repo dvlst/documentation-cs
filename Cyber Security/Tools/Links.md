@@ -58,3 +58,6 @@
 - [Cipher Suite Info](https://ciphersuite.info/cs/)
 - [SQLite Viewer](https://inloop.github.io/sqlite-viewer/)
 - [XSS Payload Strings](https://swisskyrepo.github.io/PayloadsAllTheThingsWeb/XSS%20Injection/#common-payloads)
+- [CrackStation - Password Hash Cracker](https://crackstation.net/)
+- [Windows Event Logs (1)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor)
+- [Windows Event Logs (2)](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)

@@ -295,3 +295,17 @@ dirbuster
 - Seite scannen (Wordlist unter: /usr/share/dirbuster/wordlists/)
 
 ![[CleanShot 2022-09-19 at 20.26.33.png]]
+
+## [xsstrike](https://blog.intigriti.com/2021/06/29/hacker-tools-xsstrike-hunting-for-low-hanging-fruits/)
+- Tool für automatisiertes Scannen nach XSS Vulnerabilities
+
+### Syntax
+- Scannen einer URL
+```
+python3 xsstrike.py -u [URL]
+```
+
+- Crawling einer Website
+```
+python3 xsstrike.py -u [URL] --crawl
+```

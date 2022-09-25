@@ -147,6 +147,22 @@ tcpump [Protocolname]
 ## [ngrep](https://linuxhint.com/how-to-use-ngrep/)
 - Alternatives Netzwerkanalyse Tool zu WireShark und tcpdum
 
+### Syntax
+- Filter Traffic nach Schlagwort / Dienst / Seite
+```
+ngrep -q -i 'Filter'
+```
+
+- Aufgenommenen Traffic in pcap-File schreiben
+```
+ngrep -O pcap.pcap
+```
+
+- Gewissen Port abhören
+```
+ngrep port [Port]
+```
+
 ## [dnscat2](https://www.hackingarticles.in/dnscat2-application-layer-cc/)
 - C2 Tunnel über DNS
 - Installation
@@ -187,6 +203,33 @@ window -i 2
 - Dienste erkennen
 - OS-Erkennung
 - [nmap Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/)
+- [nmap Brute Force](https://nmap.org/nsedoc/categories/brute.html)
+
+### Syntax
+- Einfacher Scan
+```
+nmap -A -v [IP]
+```
+
+- Scan alle Ports
+```
+nmap -A -v -p 0-65535 [IP]
+```
+
+- Bruteforce PostgreSQL
+```
+nmap -p [Port] --script pgsql-brute --script-args userdb=usernames.txt,passdb=passwd.txt [IP]
+```
+
+- Bruteforce SSH
+```
+nmap -p [Port] --script ssh-brute --script-args userdb=usernames.txt,passdb=passwd.txt [IP]
+```
+
+- Bruteforce FTP
+```
+nmap -p [Port] --script ftp-brute [IP]
+```
 
 ## [Snort](https://www.snort.org/)
 - Open Source Network Based Intrusion Detection
