@@ -309,3 +309,16 @@ python3 xsstrike.py -u [URL]
 ```
 python3 xsstrike.py -u [URL] --crawl
 ```
+
+## [steghide](https://steghide.sourceforge.net/)
+- Tool um Daten in Bildern zu verstecken und zu verschlüsseln
+- Extract Information:
+```
+steghide extract [FILE]
+```
+
+### [stegseek](https://github.com/RickdeJager/stegseek)
+- Tool um Passwort von mit steghide verschlüsselten Bildern zu verschlüsseln
+```
+stegseek [FILE] [WORDLIST]
+```
