@@ -318,7 +318,7 @@ steghide extract [FILE]
 ```
 
 ### [stegseek](https://github.com/RickdeJager/stegseek)
-- Tool um Passwort von mit steghide verschlüsselten Bildern zu verschlüsseln
+- Bruteforce Tool für steghide
 ```
 stegseek [FILE] [WORDLIST]
 ```
