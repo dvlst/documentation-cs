@@ -62,3 +62,4 @@
 - [CrackStation - Wordlist](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm)
 - [Windows Event Logs (1)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor)
 - [Windows Event Logs (2)](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)
+- [Informationen zu Bildern (mit steghide)](https://www.aperisolve.com/)

