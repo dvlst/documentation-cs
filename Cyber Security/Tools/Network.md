@@ -213,27 +213,32 @@ window -i 2
 ### Syntax
 - Einfacher Scan
 ```
-nmap -A -v [IP]
+nmap -A -v [Host]
 ```
 
 - Scan alle Ports
 ```
-nmap -A -v -p 0-65535 [IP]
+nmap -A -v -p 0-65535 [Host]
+```
+
+- Stealth Scan (schnell)
+```
+nmap -Ss [Host]
 ```
 
 - Bruteforce PostgreSQL
 ```
-nmap -p [Port] --script pgsql-brute --script-args userdb=usernames.txt,passdb=passwd.txt [IP]
+nmap -p [Port] --script pgsql-brute --script-args userdb=usernames.txt,passdb=passwd.txt [Host]
 ```
 
 - Bruteforce SSH
 ```
-nmap -p [Port] --script ssh-brute --script-args userdb=usernames.txt,passdb=passwd.txt [IP]
+nmap -p [Port] --script ssh-brute --script-args userdb=usernames.txt,passdb=passwd.txt [Host]
 ```
 
 - Bruteforce FTP
 ```
-nmap -p [Port] --script ftp-brute [IP]
+nmap -p [Port] --script ftp-brute [Host]
 ```
 
 ## [Snort](https://www.snort.org/)
@@ -253,6 +258,7 @@ nmap -p [Port] --script ftp-brute [IP]
 - sdrop - Block aber kein Log
 
 ### Rules
+- [Online Rules Builder](http://www.cyb3rs3c.net/)
 - Header
 	- Aktion
 	- Protokoll

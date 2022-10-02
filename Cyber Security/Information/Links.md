@@ -24,3 +24,4 @@
 - [Analyzing memdump with volatility](https://flikk.blog/2021/01/13/analyzing-a-memory-dump-for-malicious-activity-with-volatility/)
 - [What is DLP (Data Loss Prevention)?](https://www.fortinet.com/resources/cyberglossary/dlp)
 - [AbuselPDB | Check IP Adress](https://www.abuseipdb.com/)
+- [Wireshark show TLS 1.2 instead of 1.3](https://networkengineering.stackexchange.com/questions/55752/why-does-wireshark-show-version-tls-1-2-here-instead-of-tls-1-3)

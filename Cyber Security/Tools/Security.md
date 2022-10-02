@@ -322,3 +322,8 @@ steghide extract [FILE]
 ```
 stegseek [FILE] [WORDLIST]
 ```
+
+## YARA
+- Malware Analysis Tool
+- Analysiert Malware anhand von verhalten
+- Vergleich mit [YARA-Rules](https://www.varonis.com/blog/yara-rules)

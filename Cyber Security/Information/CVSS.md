@@ -97,6 +97,55 @@ There is reduced performance or interruptions in resource availability. Even ifr
 There is total loss of availability, resulting in the attacker being able to fully deny access to resources in the impacted component; this loss is either sustained (while the attacker continues to deliver the attack) or persistent (the condition persists even after the attack has completed). Alternatively, the attacker has the ability to deny some availability, but the loss of availability presents a direct, serious consequence to the impacted component (eg. the attacker cannot disrupt existing connections, but can prevent new connections; the attacker can repeatedly exploit a vulnerability that, in each instance of a successful attack, leaks a only small amount of memory, but after repeated exploitation causes a service to become completely unavailable).
 
 
+# CVSS 3.1 Temporal Score Metrics
+![[Pasted image 20220910144634.png]]
+
+### Exploit Code Maturity (E)
+#### Not Defined (E:X)
+Assigning this value to the metric will not influence the score. it is a signal to a scoring equation to skip this metric.
+
+#### Unproven that exploit exists (E:U)
+No exploit code is available, or an exploit is entirely theoretical.
+
+#### Proof of concept code (E:P)
+Proof-of-concept exploit code is available, or an attack demonstration is not practical for most systems. The code or technique is not functional in all situations and may require substantial modification by a skilled attacker.
+
+#### Functional exploit exists (E:F)
+Functional exploit code is available. The code ‘works in most situations where the vulnerability exists.
+
+#### High (E:H)
+Functional autonomous code exists, or no. exploits required (manual trigger) and details are widely available. Exploit code works in every situation, or is actively being delivered via an autonomous agent (such as a worm or virus). Network-connected systems are likely to encounter scanning or exploitation attempts. Exploit development has reached the level of reliable, widely-available, easy-to- use automated tools.
+
+### Remediation Level (RL)
+#### Not Defined (RL:X)
+Assigning this value to the metric will not influence the score. it is a signal to a scoring equation to skip this metric.
+
+#### Official fix (RL:O)
+Acomplete vendor solution is available. Either the vendor has issued an official patch, or an upgrade is available.
+
+#### Temporary fix (RL:T)
+There is an official but temporary fix available. This includes instances where the vendor issues a temporary hotfix, tool, or workaround.
+
+#### Workaround (RL:W)
+There is an unofficial, non-vendor solution available. In some cases, users of the affected technology will create a patch of their own or provide steps to work around or otherwise mitigate the vulnerability.
+
+#### Unavailable (RL:U)
+There is either no solution available or itis impossible to apply.
+
+### Report Confidence (RC)
+#### Not Defined (RC:X)
+Assigning this value to the metric will not influence the score. it is a signal to a scoring equation to skip this metric.
+
+#### Unknown (RC:U)
+There are reports of impacts that indicate a vulnerability is present. The reports indicate that the cause of the vulnerability is unknown, or reports may differ on the cause orimpacts, of the vulnerability. Reporters are uncertain of the true nature of the vulnerability, and there islittle confidence in the validity of the reports or whether a static Base score can be applied given the differences described
+
+#### Reasonable (RC:R)
+Significant details are published, but researchers either do not have full confidence in the root cause, or do not have access to source code to fully confirm all of the interactions that may lead to the result. Reasonable confidence exists, however, that the bugis reproducible and at least one impactis able to be verified (proof-of- concept exploits may provide this).
+
+#### Confirmed (RC:C)
+Detailed reports exist, or functional reproduction is possible (functional exploits may provide this). Source code is available to independently verify the assertions of the research, or the author or vendor of the affected code has confirmed the presence of the vulnerability.
+
+
 # CVSS 3.1 Environmental Score Metrics
 ![[Pasted image 20220910144105.png]]
 
@@ -222,51 +271,3 @@ Loss of availability is likely to have a serious adverse effect on the organizat
 
 #### High (AR:H)
 Loss of availability is likely to have a catastrophic adverse effect on the organization or individuals associated with the organization (e.g., employees, customers).
-
-# CVSS 3.1 Temporal Score Metrics
-![[Pasted image 20220910144634.png]]
-
-### Exploit Code Maturity (E)
-#### Not Defined (E:X)
-Assigning this value to the metric will not influence the score. it is a signal to a scoring equation to skip this metric.
-
-#### Unproven that exploit exists (E:U)
-No exploit code is available, or an exploit is entirely theoretical.
-
-#### Proof of concept code (E:P)
-Proof-of-concept exploit code is available, or an attack demonstration is not practical for most systems. The code or technique is not functional in all situations and may require substantial modification by a skilled attacker.
-
-#### Functional exploit exists (E:F)
-Functional exploit code is available. The code ‘works in most situations where the vulnerability exists.
-
-#### High (E:H)
-Functional autonomous code exists, or no. exploits required (manual trigger) and details are widely available. Exploit code works in every situation, or is actively being delivered via an autonomous agent (such as a worm or virus). Network-connected systems are likely to encounter scanning or exploitation attempts. Exploit development has reached the level of reliable, widely-available, easy-to- use automated tools.
-
-### Remediation Level (RL)
-#### Not Defined (RL:X)
-Assigning this value to the metric will not influence the score. it is a signal to a scoring equation to skip this metric.
-
-#### Official fix (RL:O)
-Acomplete vendor solution is available. Either the vendor has issued an official patch, or an upgrade is available.
-
-#### Temporary fix (RL:T)
-There is an official but temporary fix available. This includes instances where the vendor issues a temporary hotfix, tool, or workaround.
-
-#### Workaround (RL:W)
-There is an unofficial, non-vendor solution available. In some cases, users of the affected technology will create a patch of their own or provide steps to work around or otherwise mitigate the vulnerability.
-
-#### Unavailable (RL:U)
-There is either no solution available or itis impossible to apply.
-
-### Report Confidence (RC)
-#### Not Defined (RC:X)
-Assigning this value to the metric will not influence the score. it is a signal to a scoring equation to skip this metric.
-
-#### Unknown (RC:U)
-There are reports of impacts that indicate a vulnerability is present. The reports indicate that the cause of the vulnerability is unknown, or reports may differ on the cause orimpacts, of the vulnerability. Reporters are uncertain of the true nature of the vulnerability, and there islittle confidence in the validity of the reports or whether a static Base score can be applied given the differences described
-
-#### Reasonable (RC:R)
-Significant details are published, but researchers either do not have full confidence in the root cause, or do not have access to source code to fully confirm all of the interactions that may lead to the result. Reasonable confidence exists, however, that the bugis reproducible and at least one impactis able to be verified (proof-of- concept exploits may provide this).
-
-#### Confirmed (RC:C)
-Detailed reports exist, or functional reproduction is possible (functional exploits may provide this). Source code is available to independently verify the assertions of the research, or the author or vendor of the affected code has confirmed the presence of the vulnerability.

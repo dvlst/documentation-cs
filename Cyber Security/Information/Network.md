@@ -125,6 +125,7 @@
 - Integrity and Confidentiality (CIA-Triad)
 - Nur Version TLS 1.2 / 1.3 Sicher
 	- Tiefere Versionen können als Sicherheitslücke bewertet werden
+	- Tiefere Versionen verwenden SHA-1 für Handshake
 
 ### Schlüssel
 - Verwendet Schlüsselaustausch-Protokoll
