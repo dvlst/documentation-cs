@@ -107,17 +107,17 @@ pip3 install scapy
 ### Syntax
 - TCP Port öffnen und abhören:
 ```
-nc -l [Port]
+nc -l -p [Port]
 ```
 
 -  TCP Port öffnen, abhören: und Output in File schreiben:
 ```
-nc -l [Port] > file
+nc -l -p [Port] > file
 ```
 
 - Datei senden:
 ```
-nc -l [IP] [Port] < file
+nc [IP] [Port] < file
 ```
 
 - Port-Scan:
@@ -361,3 +361,23 @@ SecRule RESPONSE_BODY "@verifyCC \d{13,16}" "phase:4,id:1,t:none,log,capture,
 ![[CleanShot 2022-08-15 at 20.45.14.png]]
 
 ![[CleanShot 2022-08-15 at 20.46.01.png]]
+
+## netstat
+- Tool für Informationen über offene Ports / Aktive Verbindungen anzuzeigen
+- Unter Windows / Linux anwendbar
+
+### Syntax
+- Zeigt PID für TCP Port an (Windows)
+```
+netstat -ano -p tcp | find [PORT]
+```
+
+- Zeigt PID für TCP Port an (Linux)
+```
+netstat -ano -p tcp | grep [PORT]
+```
+
+- Statistiken über TCP anzeigen
+```
+netstat -s -p tcp
+```
