@@ -1,10 +1,10 @@
 ## Vorgehen bei Web-Testing
-1. Active Scan mit OWASP ZAP / Mit Authentication
+1. Passive & Active Scan mit OWASP ZAP / Mit Authentication und Proxy
 
 3. Mit sqlmap nach SQLi suchen
 `sqlmap.py -u [POST-GET-URL] --dbs`
 
-3. Session Cookie prüfen
+3. Session Cookie admin flag prüfen
 	- In ZAP nach Login das Session Cookie abrufen
 	![[CleanShot 2022-09-28 at 09.55.23.png]]
 	
@@ -19,7 +19,13 @@
 4. Mit dirbuster Website auf versteckte Verzeichnise Scannen 
 	`dirb [URL]`
 
-5. Nach XSS-Schwachstellen suchen
+5. Berechtigung auf Unterseiten testen
+	- Testen ob der Zugriff auf gewisse URLs auch als nicht berechtigter User oder Besucher funktioniert
+
+6. Nach XSS-Schwachstellen suchen
 	- Manuelle Injection mit `<script>alert("XSS");</script>`
 	- Automatisierte Injection mit [traxss](https://www.geeksforgeeks.org/traxss-automated-xss-vulnerability-scanner/)
 	`python3 traxss.py`
+
+7. Testen auf Fehlermeldungen
+	- Zuviele Details in Fehlermeldungen können als Sicherheitslücke bewertet werden

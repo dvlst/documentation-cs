@@ -362,7 +362,7 @@ SecRule RESPONSE_BODY "@verifyCC \d{13,16}" "phase:4,id:1,t:none,log,capture,
 
 ![[CleanShot 2022-08-15 at 20.46.01.png]]
 
-## netstat
+## [netstat](https://www.printsupportcenter.com/hc/en-us/articles/115003386949-Determine-which-program-uses-or-blocks-a-port)
 - Tool für Informationen über offene Ports / Aktive Verbindungen anzuzeigen
 - Unter Windows / Linux anwendbar
 
@@ -380,4 +380,18 @@ netstat -ano -p tcp | grep [PORT]
 - Statistiken über TCP anzeigen
 ```
 netstat -s -p tcp
+```
+
+## [telnet](https://www.computerhope.com/unix/utelnet.htm)
+- Tool für Interaktion mit Servern über gewisse Ports
+- Testen ob Port offen ist oder nicht
+
+### Syntax
+```
+telnet [IP] [Port]
+```
+
+- Information über Server anzeigen
+```
+HELP
 ```
