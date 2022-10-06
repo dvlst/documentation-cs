@@ -29,6 +29,11 @@ pip install pycrypto
 git clone https://github.com/volatilityfoundation/volatility3.git
 ```
 
+- If you get an error with pip3 you can reinstall it wth following command:
+```
+python3 -m pip install --upgrade --force-reinstall pip
+```
+
 - Install requirements
 ```
 pip3 install -r requirements.txt
@@ -41,12 +46,12 @@ pip3 install -r requirements.txt
 
 - If you get an Python-Snappy error while installing the requirements you have to install the python snappy module from the [Unofficial Windows Binaries for Python](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-snappy)
 ```
-pip install \Path\To\python-snappy
+pip3 install \Path\To\python-snappy
 ```
 
 - With this command you can show your supported version (cp310-cp310 worked for me):
 ```
-pip debug --verbose
+pip3 debug --verbose
 ```
 
 - You have to edit the requirements.txt to edit the python-snappy version:
