@@ -323,7 +323,7 @@ steghide extract [FILE]
 stegseek [FILE] [WORDLIST]
 ```
 
-## YARA
+## [YARA](https://virustotal.github.io/yara/)
 - Malware Analysis Tool
 - Analysiert Malware anhand von verhalten
 - Vergleich mit [YARA-Rules](https://www.varonis.com/blog/yara-rules)
