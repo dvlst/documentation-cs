@@ -169,6 +169,3 @@
 - Systemgrenze
 - Beziehung / Stromgrösse
 - Umwelt / Umsysteme
-
-
-## Erhebungstechniken
