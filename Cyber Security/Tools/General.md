@@ -1,6 +1,3 @@
-## Reverse Shell
-- [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
-
 ## Add VMware share in Kali
 1. Add share over VMware GUI
 2. In Kali Linux edit /etc/fstab
@@ -75,3 +72,95 @@ sha1sum /path/to/file
 ```
 sha1sum -c file1 file2
 ```
+
+## Mount .img File in Linux
+- /mnt/ Verzeichnis erstellen
+```
+mkdir /mnt/img
+```
+
+- .img File Informationen anzeigen lassen
+```
+fdisk -l disk.img
+```
+
+- Block-Size mit Startblock multiplizieren um offset herauszufinden
+![[CleanShot 2022-10-12 at 10.28.29.png]]
+
+- .img File mit korrektem offset mounten
+```
+mount -o loop,offset=1048576 disk.img /mnt/img
+```
+
+
+## sqlite
+- Tool für Datenbanken zu verwalten
+- Kann zur Anonymisierung benutzt werden
+
+### Syntax
+- DB auswählen
+```
+sqlite3 data.db
+```
+
+- Tabellen anzeigen
+```
+.tables
+```
+
+- Spalten in Tabelle anzeigen
+```
+PRAGMA table_info('tablename');
+```
+
+- Inhalt von Tabelle anzeigen lassen
+```
+SELECT * FROM tablename LIMIT 10;
+```
+
+- Alle Zeichen mit Sternchen ersetzen bis auf erstes
+	- substr(columname, 1(=Erstes Zeichen in Zeile), 1(= Anzahl Zeichen))
+```
+SELECT substr(columname, 1, 1) || '*********' FROM tablename LIMIT 10; 
+```
+
+```
+UPDATE tablename SET columname = substr(columname, 1, 1) || '*********';
+```
+
+- Alle Zeichen mit Sternchen ersetzen bis auf letztes
+```
+SELECT substr('*********', 1, 9) || substr(columname, -1) FROM tablename LIMIT 10; 
+```
+
+```
+UPDATE tablename set columname = substr('*********', 1, 9) || substr(columname, -1);
+```
+
+- Spalte mit 10-Stelliger Zufallszahl ersetzen
+```
+update tablename set columname = abs(random()) % 10000000000;
+```
+
+- In einem Datum Tag und Monat entfernen
+	- substr(columname, 1(=Erstes Zeichen in Zeile), 1(= Anzahl Zeichen))
+```
+SELECT substr(columname, 7, 4) FROM tablename LIMIT 10;
+```
+
+```
+update tablname set columname = substr(columname, 7, 4);
+```
+
+- Ersetzen von Werten mit einer Kategorie
+```
+UPDATE tablename SET columname = 'Low' WHERE columname < 50000;
+UPDATE tablename SET columname = 'Medium' WHERE columname >= 50000 and salary < 100000;
+UPDATE tablename SET columname = 'High' WHERE columname >= 100000;
+```
+
+- Werte aus Spalte löschen
+```
+UPDATE tablename SET columname1 = '', columname2 = '';
+```
+

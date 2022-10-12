@@ -246,3 +246,25 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 ## [timesketch](https://github.com/kovakina/timesketch/blob/master/docs/SearchQueryGuide.md)
 - Plaso-File anaylisieren mit GUI
 - [Search query Guide](https://timesketch.org/guides/user/search-query-guide/)
+
+## [Autopsy](https://www.autopsy.com/)
+- Tool für Disk Forensic
+- Vorinstalliert unter Kali Linux
+- Bietet UI für Durchsuchung von Disks
+
+### Syntax
+- Starten von Autopsy
+```
+sudo autopsy
+```
+
+- Nachher kann man sich auf localhost:9999/autopsy verbinden
+
+## [Photorec](https://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step)
+- Tool für Wiederherstellung von bereits gelöschten Files
+- Vorinstalliert auf Kali Linux
+
+### Syntax
+```
+photorec disk.img
+```

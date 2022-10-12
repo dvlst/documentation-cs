@@ -65,3 +65,4 @@
 - [Windows Event Logs (2)](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)
 - [Informationen zu Bildern (mit steghide)](https://www.aperisolve.com/)
 - [Caesar Cipher Decode Tool](https://www.boxentriq.com/code-breaking/caesar-cipher)
+- - [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
