@@ -153,6 +153,11 @@ python3 vol.py -f memdump.raw windows.memmap.Memmap  --pid 368 -–dump
 strings pid.368.dmp | grep "filename" | grep -v “filetype”
 ```
 
+- Search memdump after COMMAND_HISTORY
+```
+python3 -f memdump.raw windows.cmdline
+```
+
 ### Volatility2 Commands
 - Show image information
 ```

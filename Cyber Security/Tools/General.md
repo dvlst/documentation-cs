@@ -139,7 +139,7 @@ UPDATE tablename set columname = substr('*********', 1, 9) || substr(columname, 
 
 - Spalte mit 10-Stelliger Zufallszahl ersetzen
 ```
-update tablename set columname = abs(random()) % 10000000000;
+UPDATE tablename set columname = abs(random()) % 10000000000;
 ```
 
 - In einem Datum Tag und Monat entfernen
@@ -149,7 +149,7 @@ SELECT substr(columname, 7, 4) FROM tablename LIMIT 10;
 ```
 
 ```
-update tablname set columname = substr(columname, 7, 4);
+UPDATE tablname set columname = substr(columname, 7, 4);
 ```
 
 - Ersetzen von Werten mit einer Kategorie
