@@ -221,6 +221,11 @@ nmap -A -v [Host]
 nmap -A -v -p 0-65535 [Host]
 ```
 
+- Scan mit Service Version mit spezifischem Port
+```
+nmap -sV -p [Port]
+```
+
 - Stealth Scan (schnell)
 ```
 nmap -Ss [Host]
@@ -239,6 +244,11 @@ nmap -p [Port] --script ssh-brute --script-args userdb=usernames.txt,passdb=pass
 - Bruteforce FTP
 ```
 nmap -p [Port] --script ftp-brute [Host]
+```
+
+- nmap Scan in XML File exportieren
+```
+nmap [Host] -oX [file.xml]
 ```
 
 ## [Snort](https://www.snort.org/)

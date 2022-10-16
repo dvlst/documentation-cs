@@ -172,3 +172,11 @@ UPDATE tablename SET columname = 'High' WHERE columname >= 100000;
 UPDATE tablename SET columname1 = '', columname2 = '';
 ```
 
+## strings
+- Tool um strings von einem File auszugeben (Beispielsweise einer .exe)
+
+### Syntax
+- Beispielsyntax mit Filter
+```
+strings [EXE] | grep [FILTER]
+```

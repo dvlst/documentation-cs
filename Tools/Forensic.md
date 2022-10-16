@@ -85,22 +85,22 @@ python3 vol.py -f memdump.raw windows.psscan
 
 - Filter process tree after filename
 ```
-python3 vol.py -f memdump.raw windows.pslist | Select-String filename
+python3 vol.py -f memdump.raw windows.pslist | Select-String [Filename]
 ```
 
 - Filter Windows Handles after PID
 ```
-python3 vol.py -f memdump.raw windows.handles --pid 1328
+python3 vol.py -f memdump.raw windows.handles --pid [PID]
 ```
 
 - Filter Windows Handles after PID and type
 ```
-python3 vol.py -f memdump.raw windows.handles --pid 1328 | Select-String File | more
+python3 vol.py -f memdump.raw windows.handles --pid [PID] | Select-String File | more
 ```
 
-- Dump all files associated with PID 3784.
+- Dump all files associated with PID.
 ```
-python3 vol.py -f memdump.raw windows.dumpfiles.DumpFiles --pid 3784 |
+python3 vol.py -f memdump.raw windows.dumpfiles.DumpFiles --pid [PID]
 ```
 
 - See executed programs with command option history.
@@ -150,13 +150,24 @@ python3 vol.py -f memdump.raw windows.memmap.Memmap  --pid 368 -–dump
 
 - ( Use Grep to find something in the .dmp file)
 ```
-strings pid.368.dmp | grep "filename" | grep -v “filetype”
+strings pid.368.dmp | grep [Filename] | grep -v [Filetype]
 ```
 
 - Search memdump after COMMAND_HISTORY
 ```
 python3 -f memdump.raw windows.cmdline
 ```
+
+- Check SID of User which executed a Process with PID
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] windows.getsids.GetSIDs
+```
+
+- Check SID of User which executed a Service with PID
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] windows.getsids.GetServiceSIDs
+```
+
 
 ### Volatility2 Commands
 - Show image information
@@ -190,7 +201,7 @@ python vol.py -f memdump.raw --profile=Win7SP1x86 cmdline
 
 - Dump an executable file
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86 -p PID -D folder/
+python vol.py -f memdump.raw --profile=Win7SP1x86 -p [PID] -D [Path]
 ```
 
 - Show the NTLM hash of the all users
@@ -200,22 +211,47 @@ python vol.py -f memdump.raw --profile=Win7SP1x86 hashdump
 
 - Create a executable.exe file with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 procdump --dump-dir . -p 368
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 procdump -D [Path] -p [PID]
 ```
 
 - Create a executable.exe with physical memory adress
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 dumpfiles -Q 0x000000007dd6e038 -D .
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 dumpfiles -Q [Adresse] -D [Path]
+```
+
+- Extract a Driver File with PID
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] moddump -D [Path]
+```
+
+- Extract a DLL File with PID
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] dlldump -D [Path] 
+```
+
+- Find hidden injected Code / DLLs with PID
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] malfind
+```
+
+- Search linked DLL from PID
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] impscan
 ```
 
 - Search memdump after filename
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i filename
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i [Filename]
 ```
 
 - Search memdump after file-extension
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i filename | grep -v filetype
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i [Filename] | grep -v [Filetype]
+```
+
+- MFT Parser (Shows Files from the Master File Table / Every File on NTFS File System with Info)
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 mftparser
 ```
 
 - Search memdump after Windows Service Records
@@ -231,6 +267,16 @@ python vol.py -f memdump.raw --profile=Win7SP1x86_23418 cmdscan
 - Search memdump after CONSOLE_Informations
 ```
 python vol.py -f memdump.raw --profile=Win7SP1x86_23418 consoles
+```
+
+- Check SID of User which executed a Process with PID
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] getsids
+```
+
+- Check SID of User which executed a Service with PID
+```
+python vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] getservicesids
 ```
 
 ### [MemProcFS](https://github.com/ufrisk/MemProcFS)
