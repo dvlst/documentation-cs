@@ -92,6 +92,14 @@ fdisk -l disk.img
 mount -o loop,offset=1048576 disk.img /mnt/img
 ```
 
+- Automtasiert mounten
+```
+sudo losetup -f -P disk.img
+```
+
+```
+losetup -d/ dev/loop0p1
+```
 
 ## sqlite
 - Tool für Datenbanken zu verwalten
