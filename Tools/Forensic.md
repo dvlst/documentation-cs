@@ -168,7 +168,6 @@ python vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] windows.gets
 python vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] windows.getsids.GetServiceSIDs
 ```
 
-
 ### Volatility2 Commands
 - Show image information
 ```
