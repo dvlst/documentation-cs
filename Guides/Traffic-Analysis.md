@@ -3,3 +3,6 @@
 - Non-Unicode Characters in Request
 - Es wird ein anderer DNS Server als der Lokale DNS Server angefragt
 - TXT DNS Anfragen
+
+### Hinweis auf Base32 Verschlüsselung
+- Nur Grossbuchstaben

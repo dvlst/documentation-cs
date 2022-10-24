@@ -68,3 +68,4 @@
 - [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 - [Anonymisieren mit SQLite (Private Repo)](https://github.com/ii-nik/siw-facss-2021f-boot2/tree/main/40_Repetitionen/08_Anonymization_with_SQL)
 - [Whois Domain Lookup](https://www.whois.com/whois/)
+- [Uptime.is](https://uptime.is/)

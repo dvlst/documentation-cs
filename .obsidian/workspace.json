@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Information/Definitions.md",
+                "file": "To-Do.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "sqlmap",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Information/Definitions.md",
+                "file": "To-Do.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Information/Definitions.md",
+                "file": "To-Do.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Information/Definitions.md"
+                "file": "To-Do.md"
               }
             }
           }
@@ -178,15 +178,15 @@
   },
   "active": "d5ee15534018cdf8",
   "lastOpenFiles": [
-    "Information/CVSS.md",
+    "Information/Definitions.md",
+    "Information/Network.md",
+    "To-Do.md",
+    "Guides/Web-Pentesting.md",
+    "Tools/Security.md",
     "Information/Links.md",
     "Tools/Network.md",
-    "Tools/General.md",
+    "Tools/Links.md",
     "School/DETE.md",
-    "Tools/Security.md",
-    "Tools/Forensic.md",
-    "Guides/Links.md",
-    "School/BUDG.md",
-    "To-Do.md"
+    "Tools/General.md"
   ]
 }

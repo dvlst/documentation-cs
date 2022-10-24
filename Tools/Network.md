@@ -62,6 +62,11 @@ http.request.method == "POST"
 http.request.method == "GET"
 ```
 
+- Nach URL in DNS Request filtern
+```
+dns.qry.name contains [URL]
+```
+
 ### Tipps
 - Zertifikat exportieren:
 	1.  "Server Hello, Certificat, Server Hello Done" Suchen (z. B mit `tls.handshake`)

@@ -37,3 +37,4 @@
 - [What is #GRC?](https://www.convercent.com/blog/what-is-grc-and-how-does-grc-impact-operational-risk)
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
 - [Malware Analysis Sandbox](https://thehackernews.com/2022/03/how-to-build-custom-malware-analysis.html)
+- [What is ARP Spoofing?](https://www.imperva.com/learn/application-security/arp-spoofing/)
