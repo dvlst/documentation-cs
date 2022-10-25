@@ -273,9 +273,30 @@ sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/spac
 
 ![[CleanShot 2022-09-07 at 12.00.18.png]]
 
-## [hydra](https://techyrick.com/hydra-full-tutorial/)
-- Passwort Cracker
+## [hydra](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
+- Bruteforce Tool
 - Nativ in Kali installiert
+
+### Syntax
+- Scan mit bekanntem Benutzernamen
+```
+hydra -l [username] -P [passwordlist] [server] [protocol]
+```
+
+- Scan mit Verbose Modus
+```
+hydra -L [usernamelist] -P [passwordlist] [server] [protocol] -V
+```
+
+- Scan auf spezfiischen Port
+```
+hydra -s [port] -l [username] -P [passwordlist] [server] [protocol]
+```
+
+- Scan mit mehreren Threads
+```
+hydra -l [username] -P [passwordlist] [server] [protocol] -t [number of threads]
+```
 
 ## [fail2ban](https://webdock.io/en/docs/how-guides/security-guides/how-configure-fail2ban-common-services)
 - Intrusion Prevention Tool
@@ -301,6 +322,15 @@ dirbuster
 dirb [URL] /usr/share/wordlists/dir/common.txt
 ```
 
+## [gobuster](https://hackertarget.com/gobuster-tutorial/)
+- Brute Force Directories von Websiten
+- Alternativer zu dirb
+
+### Syntax
+```
+gobuster dir -u [URL] -w [worldist]
+```
+
 ## [xsstrike](https://blog.intigriti.com/2021/06/29/hacker-tools-xsstrike-hunting-for-low-hanging-fruits/)
 - Tool für automatisiertes Scannen nach XSS Vulnerabilities
 
@@ -314,6 +344,21 @@ python3 xsstrike.py -u [URL]
 ```
 python3 xsstrike.py -u [URL] --crawl
 ```
+
+## [traxss](https://www.geeksforgeeks.org/traxss-automated-xss-vulnerability-scanner/)
+- Tool für automatisiertes Scannen nach XSS Vulnerabilities
+
+### Syntax
+- Starten von traxss
+```
+python3 traxss.py
+```
+
+![[CleanShot 2022-10-25 at 22.05.01.png]]
+
+- Scanmodus wählen / URL hinterlegen und Optionen auswählen
+![[CleanShot 2022-10-25 at 22.07.32.png]]
+
 
 ## [steghide](https://steghide.sourceforge.net/)
 - Tool um Daten in Bildern zu verstecken und zu verschlüsseln
