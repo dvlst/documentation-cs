@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Network.md",
+                "file": "Guides/Web-Pentesting.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Information/CVSS.md",
+                "file": "Guides/Web-Pentesting.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "xss",
+                "query": "zap",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Security.md",
+                "file": "Guides/Web-Pentesting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/Security.md",
+                "file": "Guides/Web-Pentesting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/Security.md"
+                "file": "Guides/Web-Pentesting.md"
               }
             }
           }
@@ -176,17 +176,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "aaf49a818123cfe3",
+  "active": "ee831bb372e88e69",
   "lastOpenFiles": [
+    "Guides/Links.md",
+    "Tools/Links.md",
+    "Information/Links.md",
+    "Guides/Traffic-Analysis.md",
     "Guides/Web-Pentesting.md",
     "Tools/Security.md",
-    "To-Do.md",
-    "Guides/Links.md",
-    "School/DETE.md",
-    "Tools/General.md",
-    "Information/Links.md",
-    "Information/Definitions.md",
-    "Information/Network.md",
-    "Tools/Network.md"
+    "Tools/Network.md",
+    "Tools/Forensic.md",
+    "Information/CVSS.md",
+    "To-Do.md"
   ]
 }

