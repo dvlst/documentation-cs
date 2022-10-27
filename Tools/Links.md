@@ -72,3 +72,4 @@
 - [SQLi Cheat Sheet (1)](https://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)
 - [SQLi Cheat Sheet (2)](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 - [Path Traversal Cheat Sheet](https://owasp.org/www-community/attacks/Path_Traversal)
+- [JWT Decoder (Session Cookie)](https://dinochiesa.github.io/jwt/)

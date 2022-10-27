@@ -26,3 +26,4 @@
 - [AbuselPDB | Check IP Adress](https://www.abuseipdb.com/)
 - [Wireshark show TLS 1.2 instead of 1.3](https://networkengineering.stackexchange.com/questions/55752/why-does-wireshark-show-version-tls-1-2-here-instead-of-tls-1-3)
 - [IRC Botnet](https://www.zscaler.de/blogs/security-research/irc-botnets-alive-effective-evolving)
+- [Key Rotation](https://cloud.google.com/kms/docs/key-rotation)
