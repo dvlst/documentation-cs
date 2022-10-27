@@ -5,3 +5,4 @@
 - [ ] SIM Prüfung Aufgaben wiederholen
 - [ ] Bootcamp Aufgaben wiederholen
 - [ ] Alternative zu traxss suchen
+- [ ] Webpentesting mit Aufgabe 1 SIM erweitern
