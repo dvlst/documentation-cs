@@ -380,6 +380,12 @@ python3 xsstrike.py -u [URL]
 python3 xsstrike.py -u [URL] --crawl
 ```
 
+ Path XSS Scan einer Website
+```
+python3 xsstrike.py -u [URL] --path
+```
+
+
 ## [traxss](https://www.geeksforgeeks.org/traxss-automated-xss-vulnerability-scanner/)
 - Tool für automatisiertes Scannen nach XSS Vulnerabilities
 
