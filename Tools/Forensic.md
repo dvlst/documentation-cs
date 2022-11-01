@@ -190,6 +190,11 @@ python vol.py --profile=SomeLinux -f memdump.raw linux_ifconfig
 
 - Show Process Tree
 ```
+python vol.py -f memdump.raw --profile=Win7SP1x86 pstree
+```
+
+- Show Process List
+```
 python vol.py -f memdump.raw --profile=Win7SP1x86 pslist
 ```
 
@@ -200,10 +205,10 @@ python vol.py -f memdump.raw --profile=Win7SP1x86 cmdline
 
 - Dump an executable file
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86 -p [PID] -D [Path]
+python vol.py -f memdump.raw --profile=Win7SP1x86 procdump -p [PID] -D [Path]
 ```
 
-- Show the NTLM hash of the all users
+- Show the NTLM hash of the all users / Find out Password Hash
 ```
 python vol.py -f memdump.raw --profile=Win7SP1x86 hashdump
 ```
@@ -296,6 +301,31 @@ log2timeline.py --storage-file *Name*.plaso *Name*.VHD
 ## [timesketch](https://github.com/kovakina/timesketch/blob/master/docs/SearchQueryGuide.md)
 - Plaso-File anaylisieren mit GUI
 - [Search query Guide](https://timesketch.org/guides/user/search-query-guide/)
+
+### Syntax
+- Show Shutdown
+```
+data_type:"windows:registry:shutdown"
+```
+
+```
+data_type:"windows:evtx:record" AND event_identifier:"1074"
+```
+
+- Prefetch Info of Executable
+```
+data_type:"windows:prefetch:execution" AND executable:"[EXE.exe]"
+```
+
+- Show Autostart Applications
+```
+parser:"windows_run"
+```
+
+- Filter for specific File
+```
+"[FILE]"
+```
 
 ## [Autopsy](https://www.autopsy.com/)
 - Tool für Disk Forensic

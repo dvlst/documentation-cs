@@ -415,6 +415,5 @@ stegseek [FILE] [WORDLIST]
 ```
 
 ## [YARA](https://virustotal.github.io/yara/)
-- Malware Analysis Tool
-- Analysiert Malware anhand von verhalten
+- Malware Identification Tool
 - Vergleich mit [YARA-Rules](https://www.varonis.com/blog/yara-rules)
