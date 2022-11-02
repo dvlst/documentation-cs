@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Forensic.md",
+                "file": "School/PRMA.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#SMART",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -89,7 +89,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Forensic.md",
+                "file": "School/PRMA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/Forensic.md",
+                "file": "School/PRMA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/Forensic.md"
+                "file": "School/PRMA.md"
               }
             }
           }
@@ -165,15 +166,15 @@
   },
   "active": "11afa9a0290d0289",
   "lastOpenFiles": [
-    "Tools/General.md",
-    "Tools/Security.md",
     "To-Do.md",
+    "Tools/General.md",
+    "School/PRMA.md",
+    "School/SYEN.md",
+    "Tools/Forensic.md",
+    "Tools/Security.md",
     "Tools/Network.md",
     "Guides/Web-Pentesting.md",
     "Guides/Links.md",
-    "School/DETE.md",
-    "Tools/Forensic.md",
-    "Tools/Links.md",
-    "School/PERF.md"
+    "School/DETE.md"
   ]
 }

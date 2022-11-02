@@ -3,7 +3,7 @@
 ### Projektleiter
 - Zeit / Kosten / Leistung
 - Kritischer Pfad im Fokus
-- Porjektplanung / -diagnose / - steuerung
+- Projektplanung / -diagnose / - steuerung
 - Planungs- Koordinations-, Führungsaufgaben
 
 ### Projektmitarbeiter
@@ -75,13 +75,13 @@
 ### Task Force
 - Arbeits- / Projektgruppe für Sondereinsätze
 - Spezialisten aus verschiedenen Bereichen
-- innovative, umfangreiche und zeitlich terminiert Aufgaben
+- Innovative, Umfangreiche und Zeitlich terminierte Aufgaben
 
 ![[CleanShot 2022-07-19 at 20.21.39.png]]
 
 # Ziele
-- Verschieden Arten von Zielen
-	- Lernziele, Stakholderanforderungen, Risiken, Vorgehensmodell
+- Verschiedene Arten von Zielen
+	- Lernziele, Stakeholderanforderungen, Risiken, Vorgehensmodell
 - Ziele müssen Objektiv sein (ZDF: Zahlen, Daten, Fakten)
 - Ziele #SMART definieren
 - Eigenschaften: Lösungsneutral, Erreichbar, Messbar, Verständlich, Wiederspruchsfrei
@@ -161,7 +161,7 @@
 
 ![[CleanShot 2022-07-26 at 21.10.41.png]]
 
-### 4. Histrogramm
+### 4. Histogramm
 - Personaleinsatzplan
 - Prüfen der Auslastung und Anzahl Mitarbeiter
 
