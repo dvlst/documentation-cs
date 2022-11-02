@@ -84,6 +84,15 @@ dns.qry.name contains [URL]
 2. Unter Transmission Controll Protocl sieht man die Anzahl von Paketen mit Informationen zu der Häufigkeit
 ![[CleanShot 2022-09-27 at 19.35.19.png]]
 
+### Statistik zu IP-Adressen anzeigen
+1. Auf Statistics > Conversation klicken
+2. Unter IPv4 werden die verwendeten IP-Adressen angezeigt
+![[CleanShot 2022-11-02 at 10.31.25.png]]
+
+### HTTP-Requests anzeigen
+1. Auf Statistics > HTTP > Requests klicken
+![[CleanShot 2022-11-02 at 10.32.53.png]]
+
 ## [tshark](https://tshark.dev/)
 - Package anaylizer
 - Kann live Network Traffic abhören
@@ -216,22 +225,37 @@ window -i 2
 - [nmap Brute Force](https://nmap.org/nsedoc/categories/brute.html)
 
 ### Syntax
-- Einfacher Scan
+- Scan mit OS-Detection
+```
+nmap -O [Host]
+```
+
+- Einfacher Scan (mit OS / Version-Detection, Script-Scanning und erhöhtem Verbosity Level)
 ```
 nmap -A -v [Host]
 ```
 
-- Scan alle Ports
+- TCP-Ports mit SYN Port Scab ohne Hostdiscovery
+```
+nmap -Pn -sS -p 0-65535 [Host]
+```
+
+- TCP connect Port Scan
+```
+nmap -sV [Host]
+```
+
+- Scan alle Ports (mit OS-Detection und erhöhtem Verbosity Level)
 ```
 nmap -A -v -p 0-65535 [Host]
 ```
 
 - Scan mit Service Version mit spezifischem Port
 ```
-nmap -sV -p [Port]
+nmap -sV -p [Port] [Host]
 ```
 
-- Stealth Scan (schnell)
+- Stealth Scan (TCP SYN Scan > schneller)
 ```
 nmap -Ss [Host]
 ```

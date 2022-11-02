@@ -417,3 +417,18 @@ stegseek [FILE] [WORDLIST]
 ## [YARA](https://virustotal.github.io/yara/)
 - Malware Identification Tool
 - Vergleich mit [YARA-Rules](https://www.varonis.com/blog/yara-rules)
+- Beispiel Regel
+```
+rule ExampleMalware
+{
+    strings:
+        $reg = "HKEY_CURRENT_USER\\Classes\\prsolv" wide
+        $url = "https://x.qfdart13.net/exchange" wide
+        $host = "127.0.0.1 ds.kaspersky.com downloads.kaspersky-labs.com" wide
+        $unc = "\\\\svr-fs-01\\internal\\customers" wide
+        $key = { 74 D1 48 18 02 09 F9 C1 7A 82 CE CA 1B 44 12 3B }
+
+    condition:
+        2 of them
+}
+```

@@ -180,3 +180,11 @@ UPDATE tablename SET columname1 = '', columname2 = '';
 ```
 strings [EXE] | grep [FILTER]
 ```
+
+## wtfis
+- Tool für Abfragen von Websites via CLI (beispielsweise Virustotal)
+
+### Synatx
+```
+wtfis [URL]
+```
