@@ -5,6 +5,7 @@
 - [ ] SIM Prüfung Aufgaben wiederholen
 - [ ] Bootcamp Aufgaben wiederholen
 - [ ] Webpentesting mit Aufgabe 1 SIM erweitern
+- [ ] sqlmap [Artikel](https://gbhackers-com.cdn.ampproject.org/c/s/gbhackers.com/sqlmap-detecting-exploiting-sql-injection/amp) lesen
 
 ## Fragen
 - [Hacking-Lab Bonus Aufgabe](https://siw.hacking-lab.com/events/59/challenges/389) Wieso sieht man bei httpdump.io das Admin Flag nicht?
