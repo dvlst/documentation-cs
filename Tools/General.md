@@ -181,10 +181,18 @@ UPDATE tablename SET columname1 = '', columname2 = '';
 strings [EXE] | grep [FILTER]
 ```
 
-## wtfis
+## [wtfis](https://github.com/pirxthepilot/wtfis)
 - Tool für Abfragen von Websites via CLI (beispielsweise Virustotal)
 
 ### Synatx
 ```
 wtfis [URL]
+```
+
+## [name-that-hash](https://github.com/HashPals/Name-That-Hash)
+- Tool um Hash zu identifizieren
+
+### Syntax
+```
+name-that-hash --text [Hash]
 ```
