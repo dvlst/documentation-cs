@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Security.md",
+                "file": "Guides/Traffic-Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "john",
+                "query": "sql anony",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -162,17 +162,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "76d297b0d5e60607",
+  "active": "2a8888bdaaa52606",
   "lastOpenFiles": [
-    "Tools/Security.md",
-    "Tools/General.md",
     "To-Do.md",
-    "Guides/Web-Pentesting.md",
-    "Information/Network.md",
     "Tools/Network.md",
+    "Guides/Traffic-Analysis.md",
+    "Information/Network.md",
+    "School/DETE.md",
+    "Tools/Scripts.md",
+    "Tools/General.md",
+    "Tools/Security.md",
     "Tools/Links.md",
-    "Tools/Forensic.md",
-    "Information/CVSS.md",
-    "School/DETE.md"
+    "Tools/Monitoring.md"
   ]
 }

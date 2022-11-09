@@ -6,3 +6,6 @@
 
 ### Hinweis auf Base32 Verschlüsselung
 - Nur Grossbuchstaben
+
+### OS herausfinden
+- Filter nach IP-Adresse und http (`ip.addr == [IP] && http`)

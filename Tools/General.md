@@ -46,6 +46,8 @@ json2csv -i [JSON-Pfad] -o [CSV-Pfad]
 - Password Cracker Tool
 - Benötigt eine Liste mit Passwörten
 	- Beispielsweise [rockyou.txt](https://github.com/ohmybahgosh/RockYou2021.txt)
+
+### Syntax
 ```
 hashcat -m 0 --show hash-file rockyou.txt
 ```
@@ -102,7 +104,7 @@ losetup -d/ dev/loop0p1
 ```
 
 ## sqlite
-- Tool für Datenbanken zu verwalten
+- Tool für Datenbanken zu vhescerwalten
 - Kann zur Anonymisierung benutzt werden
 
 ### Syntax
