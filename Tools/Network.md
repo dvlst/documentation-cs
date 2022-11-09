@@ -67,6 +67,11 @@ http.request.method == "GET"
 dns.qry.name contains [URL]
 ```
 
+- Filter nach IP-Adresse und http (OS Detection)
+```
+ip.addr == [IP] && http
+```
+
 ### Tipps
 - Zertifikat exportieren:
 	1.  "Server Hello, Certificat, Server Hello Done" Suchen (z. B mit `tls.handshake`)

@@ -28,3 +28,4 @@
 - [IRC Botnet](https://www.zscaler.de/blogs/security-research/irc-botnets-alive-effective-evolving)
 - [Key Rotation](https://cloud.google.com/kms/docs/key-rotation)
 - [Online Request Catcher](https://httpdump.io/)
+- [Wireshark - Detecting Network Attacks](https://www.infosecmatter.com/detecting-network-attacks-with-wireshark/)

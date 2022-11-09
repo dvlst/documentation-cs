@@ -144,12 +144,25 @@ SELECT substr('*********', 1, 9) || substr(columname, -1) FROM tablename LIMIT 1
 ```
 
 ```
-UPDATE tablename set columname = substr('*********', 1, 9) || substr(columname, -1);
+UPDATE tablename SET columname = substr('*********', 1, 9) || substr(columname, -1);
 ```
 
 - Spalte mit 10-Stelliger Zufallszahl ersetzen
 ```
-UPDATE tablename set columname = abs(random()) % 10000000000;
+SELECT abs(random()) % 1000000000 FROM tablename LIMIT 10;
+```
+
+```
+UPDATE tablename SET columname = abs(random()) % 10000000000;
+```
+
+
+```
+SELECT substr(abs(random()), 0, 11) FROM tablename LIMIT 10;
+```
+
+```
+UPDATE tablename SET columname = substr(abs(random()), 0, 11);
 ```
 
 - In einem Datum Tag und Monat entfernen
@@ -159,14 +172,23 @@ SELECT substr(columname, 7, 4) FROM tablename LIMIT 10;
 ```
 
 ```
-UPDATE tablname set columname = substr(columname, 7, 4);
+UPDATE tablename SET columname = substr(columname, 7, 4);
+```
+
+
+```
+SELECT strftime('%Y', columname) from tablename;
+```
+
+```
+UPDATE t_person SET date_of_birth = strftime('%Y', date_of_birth);
 ```
 
 - Ersetzen von Werten mit einer Kategorie
 ```
-UPDATE tablename SET columname = 'Low' WHERE columname < 50000;
-UPDATE tablename SET columname = 'Medium' WHERE columname >= 50000 and salary < 100000;
-UPDATE tablename SET columname = 'High' WHERE columname >= 100000;
+UPDATE tablename SET columname = 'low' WHERE columname < 50000 AND columname NOT NULL;
+UPDATE tablename SET columname = 'medium' WHERE columname >= 50000 AND columname < 100000 AND columname NOT NULL;
+UPDATE tablename SET columname = 'high' WHERE columname >= 100000 AND columname NOT NULL;
 ```
 
 - Werte aus Spalte löschen

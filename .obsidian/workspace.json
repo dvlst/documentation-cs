@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Information/Network.md",
+                "file": "Guides/Traffic-Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Guides/Traffic-Analysis.md",
+                "file": "Tools/Network.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/General.md",
+                "file": "To-Do.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sql anony",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,8 +90,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/General.md",
+                "file": "To-Do.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/General.md",
+                "file": "To-Do.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/General.md"
+                "file": "To-Do.md"
               }
             }
           }
@@ -164,15 +163,15 @@
   },
   "active": "2a8888bdaaa52606",
   "lastOpenFiles": [
-    "To-Do.md",
-    "Tools/Network.md",
+    "School/PRÄV.md",
     "Guides/Traffic-Analysis.md",
-    "Information/Network.md",
-    "School/DETE.md",
-    "Tools/Scripts.md",
+    "Tools/Network.md",
+    "To-Do.md",
     "Tools/General.md",
-    "Tools/Security.md",
     "Tools/Links.md",
-    "Tools/Monitoring.md"
+    "Information/Links.md",
+    "Tools/Security.md",
+    "Tools/Forensic.md",
+    "Tools/Scripts.md"
   ]
 }
