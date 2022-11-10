@@ -6,7 +6,7 @@
 - TXT DNS Anfragen
 - Ziel: Diebstahl von Daten
 
-### ARP Poisoning
+### ARP poisoning / spoofing
 - Viele ARP Requests
 - Art des Angriffs: Man in the Middle Attacks zwischen Clients und Router
 - Capture Filter zum identifizieren:
@@ -96,13 +96,13 @@ tcp.flags.fin==1 && tcp.flags.push==1 && tcp.flags.urg==1
 ```
 
 ### UDP Port Scanning
- - Viele Ping (ICMP) Requests
+- Viele Ping (ICMP) Requests
 - Ziel: Offene Ports finden
 - Capture Filter zum identifizieren:
 ```
 icmp.type==3 and icmp.code==3
 ```
 
-## Tips
+## Tipps
 ### Hinweis auf Base32 Verschlüsselung
 - Nur Grossbuchstaben

@@ -98,6 +98,11 @@ ip.addr == [IP] && http
 1. Auf Statistics > HTTP > Requests klicken
 ![[CleanShot 2022-11-02 at 10.32.53.png]]
 
+### HTTP Files exportieren / Malware-Analysis
+1. Auf File > Export Objects > HTTP klicken
+2. Entsprechenden HTTP Request auswählen und auf Save klicken
+![[CleanShot 2022-11-10 at 09.31.06 1.png]]
+
 ## [tshark](https://tshark.dev/)
 - Package anaylizer
 - Kann live Network Traffic abhören
@@ -240,12 +245,12 @@ nmap -O [Host]
 nmap -A -v [Host]
 ```
 
-- TCP-Ports mit SYN Port Scab ohne Hostdiscovery
+- TCP-Ports mit SYN Port Scan ohne Hostdiscovery
 ```
 nmap -Pn -sS -p 0-65535 [Host]
 ```
 
-- TCP connect Port Scan
+- TCP connect Port Scan / Version der Services hinter den Ports scannen
 ```
 nmap -sV [Host]
 ```
@@ -260,9 +265,9 @@ nmap -A -v -p 0-65535 [Host]
 nmap -sV -p [Port] [Host]
 ```
 
-- Stealth Scan (TCP SYN Scan > schneller)
+- Stealth Scan (TCP SYN Scan > schnell)
 ```
-nmap -Ss [Host]
+nmap -sS [Host]
 ```
 
 - Bruteforce PostgreSQL

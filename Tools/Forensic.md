@@ -140,7 +140,7 @@ python3 vol.py -f memdump.raw] windows.registry.printkey --key "Software\Microso
 
 - Print a specific Windows Registry key, subkeys and values.
 ```
-python vol.py -f memdump.raw windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" --recurse
+python3 vol.py -f memdump.raw windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" --recurse
 ```
 
 - Save memdump to a .dmp file
@@ -160,127 +160,136 @@ python3 -f memdump.raw windows.cmdline
 
 - Check SID of User which executed a Process with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] windows.getsids.GetSIDs
+python3 vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] windows.getsids.GetSIDs
 ```
 
 - Check SID of User which executed a Service with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] windows.getsids.GetServiceSIDs
+python3 vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] windows.getsids.GetServiceSIDs
 ```
 
 ### Volatility2 Commands
 - Show image information
 ```
-python vol.py -f memdump.raw imageinfo
+python2 vol.py -f memdump.raw imageinfo
 ```
 
 ```
-python vol.py -f memdump.raw kdbgscan
+python2 vol.py -f memdump.raw kdbgscan
 ```
 
 - Network Info from Windows
 ```
-python vol.py --profile=Win7SP1x86_23418 netscan -f memdump.raw 
+python2 vol.py --profile=Win7SP1x86_23418 netscan -f memdump.raw 
 ```
 
 - Network Info from Linux
 ```
-python vol.py --profile=SomeLinux -f memdump.raw linux_ifconfig
+python2 vol.py --profile=SomeLinux -f memdump.raw linux_ifconfig
 ```
 
 - Show Process Tree
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86 pstree
+python2 vol.py -f memdump.raw --profile=Win7SP1x86 pstree
 ```
 
 - Show Process List
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86 pslist
+python2 vol.py -f memdump.raw --profile=Win7SP1x86 pslist
 ```
 
 - Show all running processes with full command line used
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86 cmdline
+python2 vol.py -f memdump.raw --profile=Win7SP1x86 cmdline
 ```
 
 - Dump an executable file
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86 procdump -p [PID] -D [Path]
+python2 vol.py -f memdump.raw --profile=Win7SP1x86 procdump -p [PID] -D [Path]
 ```
 
 - Show the NTLM hash of the all users / Find out Password Hash
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86 hashdump
+python2 vol.py -f memdump.raw --profile=Win7SP1x86 hashdump
 ```
 
 - Create a executable.exe file with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 procdump -D [Path] -p [PID]
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 procdump -D [Path] -p [PID]
 ```
 
 - Create a executable.exe with physical memory adress
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 dumpfiles -Q [Adresse] -D [Path]
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 dumpfiles -Q [Adresse] -D [Path]
 ```
 
 - Extract a Driver File with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] moddump -D [Path]
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] moddump -D [Path]
 ```
 
 - Extract a DLL File with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] dlldump -D [Path] 
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] dlldump -D [Path] 
 ```
 
 - Find hidden injected Code / DLLs with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] malfind
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] malfind
 ```
 
 - Search linked DLL from PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] impscan
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] impscan
+```
+
+```
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] dlllist
 ```
 
 - Search memdump after filename
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i [Filename]
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i [Filename]
 ```
 
 - Search memdump after file-extension
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i [Filename] | grep -v [Filetype]
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 filescan | grep -i [Filename] | grep -v [Filetype]
 ```
 
 - MFT Parser (Shows Files from the Master File Table / Every File on NTFS File System with Info)
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 mftparser
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 mftparser
 ```
 
 - Search memdump after Windows Service Records
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 svcscan
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 svcscan
 ```
 
 - Search memdump after COMMAND_HISTORY
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 cmdscan
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 cmdscan
 ```
 
 - Search memdump after CONSOLE_Informations
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 consoles
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 consoles
 ```
 
 - Check SID of User which executed a Process with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] getsids
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 -p [PID] getsids
 ```
 
 - Check SID of User which executed a Service with PID
 ```
-python vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] getservicesids
+python2 vol.py -f memdump.raw --profile=Win7SP1x86_23418 --pid [PID] getservicesids
+```
+
+- Search for additional modules
+```
+python2 vol.py -h | grep [Text]
 ```
 
 ### [MemProcFS](https://github.com/ufrisk/MemProcFS)

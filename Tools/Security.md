@@ -313,6 +313,16 @@ sqlmap.py -u [GET-URL] --risk [1-3]
 sqlmap.py -u [GET-URL] -v [1-6]
 ```
 
+- Datenbanktabellen in CSV exportieren
+```
+sqlmap.py -u [GET-URL] -D [Databasename] --dump-all --batch
+```
+
+- Formularfelder automatisiert testen und Tabellen anzeigen lassen
+```
+sqlmap.py -u [GET-URL] --tables --forms --batch
+```
+
 ### Beispiel
 1. 
 ```
