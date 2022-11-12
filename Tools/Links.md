@@ -1,4 +1,3 @@
-## Other Tools
 - [SANS Open Source Faculty Tools](https://www.sans.org/img/free-faculty-tools.pdf)
 - [Microsoft Driver Analysis](https://www.microsoft.com/en-us/wdsi/driversubmission)
 - [Parrot OS](https://www.parrotsec.org/)
@@ -73,3 +72,5 @@
 - [SQLi Cheat Sheet (2)](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 - [Path Traversal Cheat Sheet](https://owasp.org/www-community/attacks/Path_Traversal)
 - [JWT Decoder (Session Cookie)](https://dinochiesa.github.io/jwt/)
+- [Mimikatz - AD Hacker Tool](https://github.com/gentilkiwi/mimikatz)
+- [Koadic - Windows Rootkit / Pentesting](https://github.com/offsecginger/koadic)

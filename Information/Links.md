@@ -1,4 +1,3 @@
-## Information
 - [NCSC Halbjahresbericht](https://www.ncsc.admin.ch/ncsc/de/home/dokumentation/berichte/lageberichte.html)
 - [NTP-Amplification Attack](https://www.cloudflare.com/learning/ddos/ntp-amplification-ddos-attack/)
 - [ReverseShell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#python)
@@ -29,3 +28,4 @@
 - [Key Rotation](https://cloud.google.com/kms/docs/key-rotation)
 - [Online Request Catcher](https://httpdump.io/)
 - [Wireshark - Detecting Network Attacks](https://www.infosecmatter.com/detecting-network-attacks-with-wireshark/)
+- [What is mimikatz?](https://www.varonis.com/blog/what-is-mimikatz) | [mimikatz Wiki](https://github.com/gentilkiwi/mimikatz/wiki)

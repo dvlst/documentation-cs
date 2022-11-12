@@ -1,4 +1,3 @@
-## Guides
 - [Exploiting log4j](https://tryhackme.com/room/solar)
 - [HackTheBox](https://www.hackthebox.com/)
 - [What is SIEM?](https://www.varonis.com/blog/what-is-siem)
@@ -38,3 +37,8 @@
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
 - [Malware Analysis Sandbox](https://thehackernews.com/2022/03/how-to-build-custom-malware-analysis.html)
 - [What is ARP Spoofing?](https://www.imperva.com/learn/application-security/arp-spoofing/)
+
+### Pentesting
+- [Active Directory Pentest Guide](https://info.varonis.com/hubfs/docs/whitepapers/en/ebook_pen_testing_031317.pdf?hsLang=en)
+- [Unofficial mimikatz Guide](https://adsecurity.org/?page_id=1821)
+- [Koadic Guide](https://www.varonis.com/blog/koadic-lol-malware-meets-python-based-command-and-control-c2-server-part-i)

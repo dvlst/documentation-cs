@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Guides/Web-Pentesting.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "Tools/Forensic.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -38,7 +38,7 @@
               "type": "markdown",
               "state": {
                 "file": "Tools/Security.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -50,7 +50,7 @@
               "type": "markdown",
               "state": {
                 "file": "Tools/Network.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -186,15 +186,15 @@
   },
   "active": "11afa9a0290d0289",
   "lastOpenFiles": [
+    "To-Do.md",
+    "Guides/Web-Pentesting.md",
+    "Guides/Links.md",
     "Tools/Network.md",
     "Tools/Security.md",
     "Tools/Forensic.md",
-    "Guides/Web-Pentesting.md",
-    "To-Do.md",
-    "Tools/General.md",
-    "Guides/Traffic-Analysis.md",
-    "School/DETE.md",
-    "Tools/Monitoring.md",
+    "School/SYEN.md",
+    "School/ITIL.md",
+    "Information/Links.md",
     "Tools/Links.md"
   ]
 }
