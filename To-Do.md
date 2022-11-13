@@ -1,1 +1,3 @@
 - [ ] Mimikatz anschauen / dokumentieren
+- [ ] [evilginx2](https://github.com/kgretzky/evilginx) anschauen / dokumentieren / testen
+- [ ] WARP Terminal konfigurieren

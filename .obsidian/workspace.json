@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "reverse proxy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,14 +187,14 @@
   "active": "11afa9a0290d0289",
   "lastOpenFiles": [
     "To-Do.md",
-    "Guides/Web-Pentesting.md",
-    "Guides/Links.md",
     "Tools/Network.md",
     "Tools/Security.md",
     "Tools/Forensic.md",
-    "School/SYEN.md",
-    "School/ITIL.md",
-    "Information/Links.md",
-    "Tools/Links.md"
+    "Guides/Web-Pentesting.md",
+    "Tools/Links.md",
+    "School/DETE.md",
+    "Tools/General.md",
+    "Information/Definitions.md",
+    "Information/Links.md"
   ]
 }
