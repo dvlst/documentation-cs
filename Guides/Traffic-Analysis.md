@@ -86,11 +86,11 @@ tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024
 ```
 tcp.flags==0
 ```
- Capture Filter zum identifizieren von FIN scans:
+- Capture Filter zum identifizieren von FIN scans:
 ```
 tcp.flags==0x001
 ```
-- Capture Filter zum identifizieren von Xmass scans:
+- Capture Filter zum identifizieren von Xmas scans:
 ```
 tcp.flags.fin==1 && tcp.flags.push==1 && tcp.flags.urg==1
 ```
