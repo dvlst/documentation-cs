@@ -214,9 +214,37 @@ wtfis [URL]
 ```
 
 ## [name-that-hash](https://github.com/HashPals/Name-That-Hash)
-- Tool um Hash zu identifizieren
+- Tool to identify hashes
 
 ### Syntax
 ```
 name-that-hash --text [Hash]
 ```
+
+## [Starship](https://starship.rs/guide/#%F0%9F%9A%80-installation)
+- Terminal Customization Tool
+
+### Requirements
+- [Nerd Font](https://www.nerdfonts.com/) 
+
+### Install
+1. `brew install starship`
+2. `sudo nano ~/.config/starship.toml`
+3. Use example-config ([for example](https://github.com/ChristianLempa/dotfiles-win))
+4. `sudo nano ~/.zshrc`
+```
+[[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
+[[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
+[[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
+[[ -f ~/.zsh/nvm.zsh ]] && source ~/.zsh/nvm.zsh
+[[ -f ~/.zsh/wsl2fix.zsh ]] && source ~/.zsh/wsl2fix.zsh
+
+# Load Starship
+eval "$(starship init zsh)"
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+5. `brew install zsh-syntax-highlighting` (Optional)
+6. Change font in Terminal to a Nerd Font
+
+### Activate in Warp terminal
+![[CleanShot 2022-11-27 at 13.21.00.png]]

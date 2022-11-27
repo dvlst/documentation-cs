@@ -50,7 +50,7 @@
               "type": "markdown",
               "state": {
                 "file": "To-Do.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -175,15 +175,15 @@
   },
   "active": "3435154bd831b80e",
   "lastOpenFiles": [
+    "Tools/Security.md",
+    "To-Do.md",
+    "Tools/General.md",
     "Guides/Web-Pentesting.md",
     "Guides/Traffic-Analysis.md",
-    "Tools/Forensic.md",
-    "Tools/Security.md",
-    "School/PRMA.md",
-    "Tools/General.md",
-    "School/PRÄV.md",
     "Guides/Links.md",
-    "Tools/Network.md",
-    "School/DETE.md"
+    "Information/CVSS.md",
+    "Information/Network.md",
+    "Information/Links.md",
+    "Information/Definitions.md"
   ]
 }

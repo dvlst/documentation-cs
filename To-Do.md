@@ -1,3 +1,4 @@
 - [ ] Mimikatz anschauen / dokumentieren
 - [ ] [evilginx2](https://github.com/kgretzky/evilginx) anschauen / dokumentieren / testen
-- [ ] WARP Terminal konfigurieren
+- [ ] [Cobalt Strike](https://www.cobaltstrike.com/?utm_source=pocket_saves) anschauen
+- [ ] [Docker-Compose](https://www.baeldung.com/ops/docker-compose) anschauen
