@@ -248,3 +248,19 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ### Activate in Warp terminal
 ![[CleanShot 2022-11-27 at 13.21.00.png]]
+
+## cheat.sh
+- Cheat Sheets for everything
+
+### Install
+1. Download script
+	`cd /opt/`
+	`sudo curl https://cht.sh/:cht.sh > "cht.sh"`
+	`chmod +x cht.sh`
+2. Add script to $PATH
+	`sudo nano /etc/paths/
+	- Add /opt at the bottom
+	- Restart Terminal
+
+### Syntax
+`cht.sh [tool you want cheat sheet for]`
