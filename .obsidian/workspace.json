@@ -11,12 +11,8 @@
             "id": "11afa9a0290d0289",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Guides/Web-Pentesting.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
@@ -49,14 +45,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/General.md",
+                "file": "Guides/Web-Pentesting.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200.5
   },
   "right": {
     "id": "9ec99d6598f8916b",
@@ -122,7 +117,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/General.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +133,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/General.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,9 +154,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Tools/General.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -173,17 +164,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3435154bd831b80e",
+  "active": "aaf49a818123cfe3",
   "lastOpenFiles": [
+    "School/ITIL.md",
     "To-Do.md",
-    "Tools/Security.md",
-    "Tools/General.md",
+    "Tools/Network.md",
+    "Tools/Scripts.md",
     "Guides/Web-Pentesting.md",
-    "Guides/Traffic-Analysis.md",
+    "Tools/Forensic.md",
+    "Tools/Security.md",
     "Guides/Links.md",
-    "Information/CVSS.md",
-    "Information/Network.md",
     "Information/Links.md",
-    "Information/Definitions.md"
+    "School/PRMA.md"
   ]
 }
