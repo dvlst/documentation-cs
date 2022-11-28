@@ -11,52 +11,11 @@
             "id": "11afa9a0290d0289",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "To-Do.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ee831bb372e88e69",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tools/Forensic.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2a8888bdaaa52606",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tools/Security.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3435154bd831b80e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Guides/Web-Pentesting.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Forensic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/Forensic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Tools/Forensic.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -173,11 +128,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "ee831bb372e88e69",
+  "active": "11afa9a0290d0289",
   "lastOpenFiles": [
     "To-Do.md",
-    "Tools/Forensic.md",
     "School/BUDG.md",
+    "Tools/Forensic.md",
     "School/ITIL.md",
     "Tools/Network.md",
     "Tools/Scripts.md",

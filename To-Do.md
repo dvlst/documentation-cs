@@ -1,4 +1,0 @@
-- [ ] Mimikatz anschauen / dokumentieren
-- [ ] [evilginx2](https://github.com/kgretzky/evilginx) anschauen / dokumentieren / testen
-- [ ] [Cobalt Strike](https://www.cobaltstrike.com/?utm_source=pocket_saves) anschauen
-- [ ] [Docker-Compose](https://www.baeldung.com/ops/docker-compose) anschauen
